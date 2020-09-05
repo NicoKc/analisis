@@ -3,6 +3,7 @@
 *.fdb_latexmk
 *.fls
 *.log
+*.xdv
 *.synctex.gz
 __latexindent_temp.tex
 .idea/
