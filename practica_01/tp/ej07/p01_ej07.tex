@@ -1,0 +1,19 @@
+\documentclass[../practica_01.tex]{subfiles}
+
+\begin{document}
+
+$u, v$ vectores QvQ  $o_u(v)=v-p_u(v)$ es ortogonal a $u$
+
+$o_u(v)$ es ortogonal a $u$ $\leftrightarrow o_u(v) \cdot u = 0$ 
+
+$o_u(v) = v - \frac{u \cdot v}{\norm*{u}^2} \cdot u$
+
+QvQ $o_u(v) \cdot u = 0$
+
+$(v - \frac{u \cdot v}{\norm*{u}^2} \cdot u) \cdot u \equiv $
+$u \cdot v - \frac{u \cdot v}{\norm*{u}^2} \cdot u \cdot u \stackrel{u \cdot u = \norm*{u}^2}{\equiv}$
+$u \cdot v - \frac{u \cdot v}{\norm*{u}^2} \cdot \norm*{u}^2 \stackrel{u\neq 0}{\equiv}$
+
+$u \cdot v - \frac{u \cdot v}{\cancel{\norm*{u}^2}} \cdot \cancel{\norm*{u}^2} \equiv u \cdot v - u \cdot v = 0 \quad\blacksquare$
+
+\end{document}
