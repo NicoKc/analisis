@@ -1,0 +1,31 @@
+\documentclass[../practica_01.tex]{subfiles}
+
+\begin{document}
+
+    \begin{itemize}
+        \item $u, v, w \in \real^3 \wedge A \in \real^{3\cross3} \wedge A = \begin{vmatrix}
+            u \\
+            v \\
+            w
+        \end{vmatrix}\ QvQ\ u\cdot(v \crossproduct w) = det(A) $
+    \end{itemize}
+
+    $u \cdot (v \crossproduct w) = u \cdot det(\begin{vmatrix}
+        i   & j   & k   \\
+        v_1 & v_2 & v_3 \\
+        w_1 & w_2 & w_3
+    \end{vmatrix}) = u \cdot (((w_2 \cdot v_3) - (v_2 \cdot w_3)) \cdot i $
+        $ - ((v_1 \cdot w_3) - (w_1 \cdot v_3)) \cdot j$
+        $ + ((v_2 \cdot w_3) - (w_2 \cdot v_3)) \cdot k) = $
+
+        $ ((w_2 \cdot v_3) - (v_2 \cdot w_3)) \cdot u_1 $
+        $ - ((v_1 \cdot w_3) - (w_1 \cdot v_3)) \cdot u_2 $
+        $ + ((v_2 \cdot w_3) - (w_2 \cdot v_3)) \cdot u_3 = $
+        $det(\begin{vmatrix}
+            u_1 & u_2 & u_3 \\
+            v_1 & v_2 & v_3 \\
+            w_1 & w_2 & w_3
+        \end{vmatrix}) \blacksquare$
+
+
+\end{document}

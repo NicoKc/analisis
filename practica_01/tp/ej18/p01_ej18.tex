@@ -1,0 +1,46 @@
+\documentclass[../practica_01.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item
+            \begin{itemize}
+                \item $L_1 = t(1,-1,2) + (1,1,0)$
+                \item $L_2 = t(-1,1,0) + (2,0,2)$
+            \end{itemize}
+
+            $\exists t_1, t_2 \in \real : (t_1+1,-t_1+1,2t_1) = (-t_2+2,t_2,2)$
+
+            \begin{itemize}
+                \item $t_1+1 = -t_2+2$
+                \item $-t_1+1 = t_2 \stackrel{\star}{\Rightarrow} 0 = t_2$
+                \item $2t_1 = 2 \Rightarrow \star: t_1 = 1$
+            \end{itemize}
+
+            $P = (2,0,2) : P\in L_1 \wedge P \in L_2$
+
+            $\Rightarrow$ La intersección entre $L_1$ y $L_2$ es $P$ $\blacksquare$
+
+        \item 
+        \begin{itemize}
+                \item $P = (1,1,2) \in L_2 \wedge$
+                    $ P_2 = (1,1,0) \in L_1 \wedge $
+                    $ P_3 (3,-1,4) \in L_1$
+                \item $a = \overrightarrow{PP_2} = (0,0,-2)$
+                \item $b = \overrightarrow{PP_3} = (2,-2,2)$
+            \end{itemize}
+
+            $a \crossproduct b = det(\begin{vmatrix}
+                i & j & k \\
+                0 & 0 & -2 \\
+                2 & -2 & 2
+            \end{vmatrix}) = -4\widehat{i} - 4\widehat{j} - 0\widehat{k}$
+
+            $\Pi: (-4,-4,0) \cdot (x-1,y-1,z) = 0 \equiv $
+            $\Pi: -4x + 4 -4y + 4 = 0 \equiv$
+            $\Pi: -4x -4y  = -8 $
+            $\Pi: x + y  = 2 $
+
+    \end{enumerate}
+
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass[../practica_01.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item
+            \begin{itemize}
+                \item $A= (1,3,1)$
+                \item $B= (2,1,1)$
+                \item $C= (3,4,1)$
+                \item $a = \overrightarrow{AB} = (1,-2,0) $
+                \item $b = \overrightarrow{AC} = (2,1,0) $
+                
+                \item Ecuación parametrica $= $
+                    $(x,y,z) = \overrightarrow{OP_0} + \alpha\cdot\overrightarrow{u} + \beta\cdot\overrightarrow{v} \Rightarrow$
+
+                    $\Pi : (x,y,z) = (1,3,1) + \alpha \cdot (1,-2,0) + \beta \cdot (2,1,0), \alpha,\beta \in \real$
+
+            \end{itemize}
+
+            QvQ $A, B, C \in \Pi$
+            \begin{itemize}
+                \item $(1,3,1) = (1,3,1) + 0 \cdot (1,-2,0) + 0 \cdot (2,1,0)$
+                \item $(2,1,1) = (1,3,1) + \alpha \cdot (1,-2,0) + \beta \cdot (2,1,0)$
+                
+                    \begin{itemize}
+                        \item $2 = 1 + \alpha + \beta(2) \stackrel{\star}{\Rightarrow}$
+                                $ 2 =  1 + \alpha + (\alpha(2)-2)(2) \Rightarrow$
+                                $ 2 = 1 + \alpha + \alpha(4) - 4 \Rightarrow $
+                                $ 5 = \alpha(5) \Rightarrow $
+                                $ \star^{\prime}: \alpha = 1 $
+                        \item $1 = 3 + \alpha(-2) + \beta \Rightarrow \star: \beta = \alpha(2)-2 \stackrel{\star^{\prime}}{\Rightarrow} \beta = 0$
+                        \item $1 = 1 $
+                    \end{itemize}
+
+                \item $(3,4,1) = (1,3,1) + 0 \cdot (1,-2,0) + 1 \cdot (2,1,0)$
+            \end{itemize}
+
+        \item 
+            \begin{itemize}
+                \item $ n = a \crossproduct b = det(\begin{vmatrix}
+                        i & j  & k \\
+                        1 & -2 & 0 \\
+                        2 & 1  & 0 \\
+                    \end{vmatrix}) = 0\widehat{i} - 0\widehat{j} + 5\widehat{k} = (0,0,5)$
+
+                \item $ \Pi: (0,0,5) \cdot (x-1,y-3,z-1) = 0 $
+            \end{itemize}
+
+    \end{enumerate}
+
+\end{document}
