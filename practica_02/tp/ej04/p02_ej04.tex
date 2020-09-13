@@ -1,0 +1,70 @@
+\documentclass[../practica_02.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item
+            \begin{itemize}
+                \item $\star: r = -2\sin(\theta)$
+                \item $ x = \cos(\theta)*r \stackrel{\star}{\Rightarrow} x = \cos(\theta)\cdot(-2\sin(\theta))$
+                \item $ x = \sin(\theta)*r \stackrel{\star}{\Rightarrow} y = -2\sin^{2}(\theta)$
+            \end{itemize}
+
+            \quad $\left\{
+                \begin{array}{ll}
+                    x(t) = -2\cdot\cos(t)\sin(t)\\
+                    y(t) = -2\sin^{2}(\theta)\\
+                    0 \leq t < \pi
+                \end{array}
+            \right.$
+
+            \begin{tabular}{ c|c|c } 
+                \hline
+                    $t$                 & $x$  & $y$ \\
+                \hline
+                    $\frac{\pi}{4}$     & $-1$ & $-1$ \\ 
+                    $\frac{\pi}{2}$     & $0 $ & $-2$ \\ 
+                    $\pi$               & $0 $ & $0 $ \\ 
+                    $\frac{3\pi}{4}$    & $1 $ & $-1$ \\
+                \hline
+            \end{tabular}
+
+            \includegraphics[scale=0.8]{ej04/resources/a.png} $ $
+
+        \item 
+            \begin{itemize}
+                \item $\star: r=1-\cos(\theta)$
+                \item $x= r\cdot\cos(\theta) \stackrel{\star}{\Rightarrow} x = \cos(\theta)-\cos^{2}(\theta)$
+                \item $y= r\cdot\sin(\theta) \stackrel{\star}{\Rightarrow} y = \sin(\theta)-\sin(\theta)\cdot\cos(\theta)$
+            \end{itemize}
+
+            $ r = \sqrt{x^2 + t^2} \stackrel{\star}{\equiv}$
+
+            $ \sqrt{x^2 + t^2} = 1 - \cos(\theta) \stackrel{\cos(\theta)= \frac{x}{\sqrt{x^2 + y^2}}}{\equiv} $
+
+            $ \sqrt{x^2 + t^2} = 1 - \frac{x}{\sqrt{x^2 + y^2}} \equiv $
+
+            $ x^2 + y^2 = \sqrt{x^2 + y^2} - x$
+
+            \quad $\left\{
+                \begin{array}{ll}
+                    x(\theta) = \cos(\theta)-\cos^{2}(\theta)\\
+                    y(\theta) = \sin(\theta)-\sin(\theta)\cdot\cos(\theta)\\
+                    0 \leq \theta < 2\pi
+                \end{array}
+            \right.$
+
+            \begin{tabular}{ c|c|c } 
+                \hline
+                    $t$                 & $x$  & $y$ \\
+                \hline
+                    $0$                 & $0 $ & $0 $ \\ 
+                    $\pi$               & $-2 $ & $0 $ \\
+                \hline
+            \end{tabular}
+
+            \includegraphics[scale=0.8]{ej04/resources/a.png} $ $
+    \end{enumerate}
+
+
+\end{document}
