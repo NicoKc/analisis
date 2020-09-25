@@ -1,0 +1,37 @@
+\documentclass[../practica_03.tex]{subfiles}
+
+\begin{document}
+
+    \begin{itemize}
+        \item $x = r\cdot\cos(\theta)$
+        \item $y = r\cdot\sin(\theta)$
+    \end{itemize}
+
+    $ \cos^2(\theta)\sin^2(\theta) $
+
+    \begin{enumerate}
+        \item $\lim_{(x,y)\to(0,0)} \frac{x^3+y^3}{x^2+y^2} \equiv$
+
+            $ \lim_{(r,\theta)\to(0,0)} \frac{r^{\cancel{3}}(\sin^3(\theta)\cos^3(\theta))}{\cancel{r^2}} $
+
+            $ \lim_{(r,\theta)\to(0,0)} \sin^3(\theta)\cos^3(\theta) = 0 $
+
+        \item $\lim_{(x,y)\to(0,0)} (x^2+y^2)\cdot\ln(x^2+y^2) \equiv$
+
+            $ \lim_{(r,\theta)\to(0,0)} r^2(\stackrel{1}{\cancel{(\cos^2(\theta)\sin^2(\theta))}})\cdot\ln(r^2(\stackrel{1}{\cancel{(\cos^2(\theta)\sin^2(\theta))}})) \equiv $
+
+            $ \lim_{(r,\theta)\to(0,0)} r^2\cdot\ln(r^2) \equiv $
+
+            $ \lim_{(r,\theta)\to(0,0)} r^2\cdot 2\cdot\ln(r) = 0$
+
+        \item $\lim_{(x,y)\to(0,0)} \frac{e^{-(x^2+y^2)}-1}{x^2+y^2} \equiv$
+
+            $ \lim_{(r,\theta)\to(0,0)} \frac{e^{r^2}-1}{r^2} = 1 $
+            
+        \item $\lim_{(x,y)\to(0,0)} \frac{\sin(x^2+y^2)}{x^2+y^2} \equiv$
+
+            $ \lim_{(r,\theta)\to(0,0)} \frac{\sin(r^2)}{r^2} = 1 $
+
+    \end{enumerate}
+
+\end{document} 

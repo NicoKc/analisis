@@ -1,0 +1,46 @@
+\documentclass[../practica_03.tex]{subfiles}
+
+\begin{document}
+
+    $ \lim_{(x,y)\to(2,3)}  y\sin(x\cdot y -6) = 0 $
+
+    $ $
+
+    $ \norm*{(x-2,y-3)} < \delta \Rightarrow \abs*{y\cdot \sin(x \cdot y - 6)} < \epsilon $
+
+    \begin{itemize}
+        \item $\abs*{x-2} \leq \norm*{(x-2,y-3)} < \delta$
+        \item $\abs*{y-3} \leq \norm*{(x-2,y-3)} < \delta$
+    \end{itemize}
+
+    $\abs*{y\cdot \sin(x \cdot y - 6)} \equiv$
+
+    $\abs*{((y-3)+3)\cdot\sin(((x-2)+2)\cdot((y-3)+3) - 6)} \equiv$
+
+    $\abs*{((y-3)+3)\cdot\sin((x-2)(y-3) + 3(x-2) + 2(y-3) + 6 - 6)} \equiv$
+
+    $\abs*{((y-3)+3)\cdot\sin((x-2)(y-3) + 3(x-2) + 2(y-3))} \equiv$
+
+    $\abs*{(y-3)+3} \cdot \abs*{\sin((x-2)(y-3) + 3(x-2) + 2(y-3))}$ 
+
+    $(x,y) \to (2,3) \Rightarrow (x-2)(y-3) + 3(x-2) + 2(y-3) \to 0 $
+
+    $ \star: x \to 0 \Rightarrow \sen(x) \leq x $
+
+    $\abs*{(y-3)+3} \cdot \abs*{\sin((x-2)(y-3) + 3(x-2) + 2(y-3))} \stackrel{\star}{\leq}$ 
+
+    $\abs*{(y-3)+3} \cdot \abs*{(x-2)(y-3) + 3(x-2) + 2(y-3)} \stackrel{DesTrian}{\leq}$
+
+    $(\abs*{y-3} + 3) \cdot (\abs*{x-2}\abs*{y-3} + 3 \abs*{x-2} + 2\abs*{y-3}) = $ 
+
+    $(\abs*{y-3} + 3) \cdot (\abs*{x-2}\abs*{y-3} + 3 \abs*{x-2} + 2\abs*{y-3}) < $
+
+    $(\delta + 3) \cdot (\delta^2 + 5\delta) \stackrel{\delta \leq 1}{\leq} $ 
+
+    $(\delta + 3) \cdot (6\delta) = $
+
+    $6\delta^2 + 18\delta \stackrel{\delta \leq 1}{\leq} $
+
+    $24\delta = \epsilon \Rightarrow \delta = \min(1,\frac{\epsilon}{24})$ 
+
+\end{document} 

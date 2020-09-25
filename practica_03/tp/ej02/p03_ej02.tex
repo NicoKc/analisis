@@ -1,0 +1,55 @@
+\documentclass[../practica_03.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+
+        \item 
+            \begin{enumerate}
+                \item $\lim_{(x,y)\to(1,0)} x + y = 1$
+
+                    $ \norm*{(x-1,y)} < \delta \Rightarrow \abs*{x+y - 1} < \epsilon $
+
+                    \begin{itemize}
+                        \item $ \abs*{x-1} \leq \norm*{(x-1,y)} < \delta $
+                        \item $ \abs*{y} \leq \norm*{(x-1,y)} < \delta $
+                    \end{itemize}
+
+                    $\abs*{x+y-1} \leq \abs*{x-1} + \abs*{y} < 2\cdot\delta \Rightarrow$
+
+                    $\delta = \frac{\epsilon}{2}$
+
+                \item $\lim_{(x,y)\to(-1,8)} xy = -8$
+                
+                    $\norm*{(x+1,y-8)} < \delta \Rightarrow \abs*{xy+8} < \epsilon$
+
+                    \begin{itemize}
+                        \item $ \abs*{x+1} \leq \norm*{(x+1,y-8)} < \delta $
+                        \item $ \abs*{y-8} \leq \norm*{(x+1,y-8)} < \delta $
+                    \end{itemize}
+
+                    $\abs*{xy+8} = \abs*{((x+1)-1)((y-8)+8) +8} =  $
+
+                    $\abs*{(x+1)(y-8) + (x+1)(8) + (-(y-8)) - 8 +8} =  $
+
+                    $\abs*{(x+1)(y-8) + (x+1)(8) + (-(y-8))} \stackrel{DesigualdadTriangular}{\leq} $
+
+                    $\abs*{(x+1)(y-8)} + 8\abs*{x+1} +\abs*{y-8} < $
+
+                    $ \delta\cdot\delta + 8\delta + \delta  = \delta^2 + 9\delta \stackrel{\delta \leq 1}{\equiv}$
+
+                    $ 10\delta \Rightarrow \delta = \frac{\epsilon}{10}$
+            \end{enumerate}
+
+        \item
+            \begin{enumerate}
+
+                \item $\epsilon = 1 \Rightarrow \delta = \frac{1}{10}$
+
+                \item $\epsilon = \frac{1}{100}\Rightarrow \delta = \frac{1}{1000}$
+
+            \end{enumerate}
+
+    \end{enumerate}
+
+\end{document} 

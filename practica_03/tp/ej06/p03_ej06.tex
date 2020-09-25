@@ -1,0 +1,32 @@
+\documentclass[../practica_03.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item $f(x,y) = \frac{x^4y^4}{(x^2+y^4)^3}$
+
+            $ \lim_{x \to 0 }  f(x,mx) \equiv $
+
+            $ \lim_{x \to 0 } \frac{x^8m^4}{(x^2+(mx)^4)^3} = $
+
+            $ \lim_{x \to 0 } \frac{x^8m^4}{(x^4+2x^2(mx)^4+(mx)^8)((x^2+(mx)^4)}$
+
+            $ \lim_{x \to 0 } \frac{x^8m^4}{x^6+ 3x^8m^4 + 3x^{10}m^8 + m^{12}x^{12}} = 0$
+
+        \item $f(x,y) = \frac{x^2}{x^2+y^2-x}$
+
+            $ \lim_{x \to 0 }  f(x,mx) \equiv $
+
+            $ \lim_{x \to 0 }  \frac{x^2}{x^2+mx^2-x} = $
+            
+            $ \lim_{x \to 0 }  \frac{x^{\cancel{2}}}{\cancel{x}(x(1+m)-1)} = 0 $
+            
+            $ \lim_{x \to 0 }  f(x, x) = $
+
+            $ \lim_{x \to 0 }  \frac{x^2}{x^2\cancel{+x}\cancel{-x}} = 1$
+
+            Si $m=0$ da 1, sino 0 $\Rightarrow \ \nexists L$
+
+    \end{enumerate}
+
+\end{document} 

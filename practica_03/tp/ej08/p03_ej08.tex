@@ -1,0 +1,40 @@
+\documentclass[../practica_03.tex]{subfiles}
+
+\begin{document}
+
+    $f(x,y) = \left\{
+        \begin{array}{ll}
+            \frac{(x-1)^3\cos(y)}{(x-1)^2 +y^2} \qquad si\ (x,y)\neq(1,0)\\
+            a \qquad si\ (x,y) = (1,0)
+        \end{array}
+    \right.$
+
+    Veo el limite de $f(x,y)$ en $(1,0)$ 
+
+    Pruebo por curvas
+
+    \begin{itemize} %\frac{(x-1)^3\cos(y)}{(x-1)^2 +y^2}%
+        \item $x = 1 \Rightarrow$
+            $ \lim_{y \to 0} \frac{0\cdot\cos(y)}{(y^2} = 0$
+        \item $y = 0 \Rightarrow$
+            $ \lim_{x \to 1} \frac{(x-1)^3}{(x-1)^2} = 0$
+        \item $y = (x-1) \Rightarrow$
+            $ \lim_{x \to 1} \frac{(x-1)^{\cancel{3}}\cos(x-1)}{2\cancel{(x-1)^2}} = 0$
+    \end{itemize}
+
+    Pruebo por definición
+
+    $ \exists \delta : \norm*{(x-1,y)} < \delta \Rightarrow \abs*{f(x,y)} < \epsilon $
+
+    $\abs*{\frac{(x-1)^3\cos(y)}{(x-1)^2 +y^2}} \leq$
+
+    $\frac{(x-1)^3\abs*{\cos(y)}}{(x-1)^2 +y^2} \leq$
+
+    $\frac{(x-1)^3\abs*{\cos(y)}}{(x-1)^2 +y^2} \stackrel{\delta \leq 1}{\leq}$
+
+    $\frac{(x-1)^3}{(x-1)^2 +y^2} \leq$
+
+    $\frac{\norm*{(x-1,y)}^{\cancel{3}}}{\cancel{\norm*{(x-1,y)}^2}} = \delta \Rightarrow $
+    $\delta = \min(1, \epsilon)$
+
+\end{document} 
