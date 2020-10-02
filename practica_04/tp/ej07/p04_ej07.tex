@@ -1,0 +1,44 @@
+\documentclass[../practica_04.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item $f(x,y) = x^3y^5+2x^4y$
+            \begin{itemize}
+                \item $f_x = 3x^2y^5+8x^3y $
+                \item $f_{xx} = 6xy^5 + 24x^2y $
+                \item $f_{xy} = 15x^2y^4 + 8x^3 $
+                \item $f_y = x^35y^4+2x^4 $
+                \item $f_{yy} = 20x^3y^3 $
+                \item $f_{yx} = 15x^2y^4 + 8x^3 $
+            \end{itemize}
+        \item $f(x,y) = \sin^2(x+y)$
+            \begin{itemize}
+                \item $f_x = 2\sin(x+y)\cos(x+y) $
+                \item $f_{xx} = -2\sin^2(x+y) + 2\cos^2(x+y) $
+                \item $f_{xy} = -2\sin^2(x+y) + 2\cos^2(x+y)$
+                \item $f_y = 2\sin(x+y)\cos(x+y)$
+                \item $f_{yy} = -2\sin^2(x+y) + 2\cos^2(x+y)$
+                \item $f_{yx} = -2\sin^2(x+y) + 2\cos^2(x+y)$
+            \end{itemize}
+        \item $f(x,y) = \sqrt{x^2+y^2}$
+            \begin{itemize}
+                \item $f_x = \frac{x}{\sqrt{x^2+y^2}} $
+                \item $f_{xx} = \frac{y^2}{(x^2+y^2)^{\frac{3}{2}}} $
+                \item $f_{xy} = \frac{xy}{(x^2+y^2)^{\frac{3}{2}}}$
+                \item $f_y = \frac{y}{\sqrt{x^2+y^2}}$
+                \item $f_{yy} = \frac{x^2}{(x^2+y^2)^{\frac{3}{2}}}$
+                \item $f_{yx} = \frac{xy}{(x^2+y^2)^{\frac{3}{2}}}$
+            \end{itemize}
+        \item $f(x,y) = \frac{xy}{x-y}$
+            \begin{itemize}
+                \item $f_x = \frac{y^2}{(x-y)^2} $
+                \item $f_{xx} = \frac{-2y^2}{(x-y)^3}$
+                \item $f_{xy} = \frac{-2yx}{(x-y)^3}$
+                \item $f_y = \frac{x^2}{(x-y)^2}$
+                \item $f_{yy} = \frac{2x^2}{(x-y)^3}$
+                \item $f_{yx} = \frac{-2yx}{(x-y)^3}$
+            \end{itemize}
+    \end{enumerate}
+
+\end{document}
