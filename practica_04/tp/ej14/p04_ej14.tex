@@ -2,4 +2,97 @@
 
 \begin{document}
 
+    \section*{Regla de la cadena}
+
+        $\frac{\partial z}{\partial t} = 
+            \frac{\partial f}{\partial x} \cdot \frac{\partial x}{\partial t} +
+            \frac{\partial f}{\partial y} \cdot \frac{\partial y}{\partial t} $
+
+    \section*{Ejercicios}
+
+    \begin{enumerate}
+        \item
+            \begin{itemize}
+                \item $f(x,y) = x^2 + y^2 + xy$
+                \item $r(t) = (\sin(t), e^t)$
+            \end{itemize}
+
+            $ f : \real^2 \to \real $
+
+            $ r : \real \to \real^2 $
+
+            $ z = (f \circ r) = f(r(t)) \Rightarrow $
+
+            $ z : \real \to \real $
+
+            $ z = f(r(t)) = f(\sin(t), e^t) = \sin(t)^2 + e^{2t} + e^t\sin(t) $
+
+            $ \frac{\partial z}{\partial t} = \frac{\partial f}{\partial x} \cdot \frac{\partial \sin(t)}{\partial t} +
+            \frac{\partial f}{\partial y} \cdot \frac{\partial e^t}{\partial t} = $
+
+            $ f_x(r(t))  \cdot \frac{\partial \sin(t)}{\partial t} + f_y(r(t))\cdot \frac{\partial e^t}{\partial t} = $
+
+            $ \left. 2x + y \right|_{r(t)} \cdot \cos(t) + $
+            $ \left. 2y + x \right|_{r(t)} \cdot e^t = $
+
+            $ (2\sin(t) + e^t) \cdot \cos(t) + (2e^t + \sin(t)) \cdot e^t =  $
+
+            $ 2\sin(t)\cos(t) + \cos(t)e^t + 2e^{2t} + e^t\sin(t) $
+
+            $ (\sin(t)^2 + e^{2t} + e^t\sin(t))^\prime = $
+            
+            $2\sin(t)\cos(t) + 2e^{2t} + e^t\sin(t) + e^t\cos(t) $
+
+        \item
+            \begin{itemize}
+                \item $ f(x,y) = \cos(x + 4y) $
+                \item $ r(t) = (5t^4, \frac{1}{t}) $
+            \end{itemize}
+
+            $ f: \real^2 \to \real $
+
+            $ r: \real \to \real^2 $
+
+            $ z = (f \circ r)(t) $
+
+            $ z = \real \to \real $
+
+            $ \frac{\partial z}{\partial t} = \frac{\partial f}{\partial x} \cdot \frac{\partial 5t^4}{\partial t} +
+            \frac{\partial f}{\partial y} \cdot \frac{\partial \frac{1}{t}}{\partial t} = $
+
+            $ f_x(r(t)) \cdot 20t^3 + f_y(r(t)) \cdot \frac{-1}{t^2} = $
+
+            $ \left. -\sin(x + 4y) \right|_{r(t)} \cdot 20t^3 + \left. (-4)\sin(x + 4y) \right|_{r(t)} \cdot \frac{-1}{t^2} =$
+
+            $ -\sin(5t^4 + \frac{4}{t}) \cdot 20t^3 + (-4)\sin(5t^4 + \frac{4}{t}) \cdot \frac{-1}{t^2} =$
+
+            $ -\sin(5t^4 + \frac{4}{t}) \cdot 20t^3 + \frac{4\sin(5t^4 + \frac{4}{t})}{t^2} =$
+
+            $ $
+
+        \item
+            \begin{itemize}
+                \item $ f(x,y) = \sqrt{1+x^2+y^2} $
+                \item $ r(t) = (\ln(t), \cos(t)) $
+            \end{itemize}
+
+            $ f: \real^2 \to \real $
+
+            $ r: \real \to \real^2 $
+
+            $ z = (f \circ r)(t) $
+
+            $ z: \real \to \real $
+
+            $ \frac{\partial z}{\partial t} = $
+            $ f_x(r(t)) \cdot \frac{1}{x} + f_y(r(t)) \cdot (-\sin(t)) $
+
+            $ \left. \frac{x}{\sqrt{1 + x^2 + y^2}} \right|_{r(t)} \cdot \frac{1}{x} + $
+            $ \left. \frac{y}{\sqrt{1 + x^2 + y^2}} \right|_{r(t)} \cdot (-\sin(t)) $
+
+            $ \frac{ln(t)}{\sqrt{1 + ln(t)^2 + \cos(t)^2}} \cdot \frac{1}{x} + $
+            $ \frac{\cos(t)}{\sqrt{1 + ln(t)^2 + \cos(t)^2}} \cdot (-\sin(t)) $
+
+    \end{enumerate}
+
 \end{document}

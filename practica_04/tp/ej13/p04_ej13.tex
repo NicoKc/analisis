@@ -2,4 +2,64 @@
 
 \begin{document}
 
+    \begin{enumerate}
+        \item $f(x,y,z) = \sqrt{\abs*{xyz}}$
+            No existen las derivadas parciales en el origen
+
+        \item $f(x,y) = 
+            \left\{
+                \begin{array}{ll}
+                    \frac{x^4-y^4}{x^2+y^2} \qquad si\ (x,y) \neq (0,0)\\
+                    0 \qquad si\ (x,y) = (0,0)
+                \end{array}
+            \right.$
+
+            $f_x(0,0) = \lim_{x\to} \frac{f(h,0)-f(0,0)}{h} = $
+
+            $\lim_{h\to0} \frac{\frac{h^4}{h^2}}{h} = $
+
+            $\lim_{h\to0} \frac{h\cancel{^4}}{\cancel{h^3}} = 0 $
+
+            $f_y(0,0) = \lim_{h\to0} \frac{f(0,h)-f(0,0)}{h} = $
+
+            $\lim_{h\to0} \frac{\frac{-h^4}{h^2}}{h} = $
+
+            $\lim_{h\to0} \frac{-h\cancel{^4}}{\cancel{h^3}} = 0 $
+
+            $\lim_{(x,y)\to(0,0)} \frac{\frac{x^4-y^4}{x^2+y^2}}{\norm*{x^2+y^2}} \stackrel{?}{=} 0 $
+
+            $\lim_{(x,y)\to(0,0)} \frac{\frac{x^4-y^4}{\norm*{x^2+y^2}^2}}{\norm*{x^2+y^2}} = $
+
+            $\lim_{(x,y)\to(0,0)} \frac{x^4-y^4}{\norm*{x^2+y^2}^3}  $
+
+            $\lim_{(x,y)\to(0,0)} \frac{\abs*{x^4-y^4}}{\norm*{x^2+y^2}^3} \stackrel{DesTrian}{\leq} $
+
+            $\lim_{(x,y)\to(0,0)} \frac{x^4+y^4}{\norm*{x^2+y^2}^3} \leq $
+
+            $\lim_{(x,y)\to(0,0)} \frac{2\norm*{x^2+y^2}\cancel{^4}}{\cancel{\norm*{x^2+y^2}^3}} \leq $
+
+            $ 2 \lambda < \epsilon \Rightarrow \lambda \leq \frac{\epsilon}{2}$
+
+            $\Pi: z = 0$
+
+        \item $f(x,y) = 
+            \left\{
+                \begin{array}{ll}
+                    \frac{x^2}{x^2+y^2}\cdot \sin(\frac{1}{\sqrt{x^2+y^2}}) \qquad si\ (x,y) \neq (0,0)\\
+                    0 \qquad si\ (x,y) = (0,0)
+                \end{array}
+            \right.$
+
+            $f_x(0,0) = \lim_{h\to0} \frac{f(h,0)-f(0,0)}{h} = $
+
+                $\lim_{h\to0} \frac{\cancel{\frac{h^2}{h^2}}\cdot \sin(\frac{1}{\sqrt{h^2}})}{h} = $
+
+                $\lim_{h\to0} \frac{\sin(\frac{1}{\sqrt{h^2}})}{h} = $
+
+                $\lim_{h\to0} \frac{\sin(\frac{1}{\sqrt{h^2}})}{h} = \nexists $
+
+                $\Rightarrow$ No es diferenciable en el origen
+
+    \end{enumerate}
+
 \end{document}

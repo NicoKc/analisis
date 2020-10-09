@@ -4,6 +4,8 @@ texFileTemplate = """\\documentclass[../practica_{:02d}.tex]{{subfiles}}
 
 \\begin{{document}}
 
+    $ $
+
 \\end{{document}}
 """
 

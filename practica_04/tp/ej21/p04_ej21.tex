@@ -2,4 +2,26 @@
 
 \begin{document}
 
+    \begin{itemize}
+        \item $z = f(x,y)$
+        \item $f \in C^2$
+        \item $x = r^2 + s^2$
+        \item $y = 2rs$
+    \end{itemize}
+
+    $ \frac{\partial^2 z}{\partial r \partial s} = $
+    $ \frac{\partial}{\partial r} (\frac{\partial z}{\partial s}) $
+
+    $\frac{\partial z}{\partial s} = f_x \cdot 2s + f_y \cdot 2r $
+
+    $\frac{\partial (f_x \cdot 2s) }{\partial r}  = $
+    $ f_{xx} \cdot 2r + f_{xy} \cdot 2s $
+
+    $\frac{\partial (f_y \cdot 2r) }{\partial r}  = $
+    $ (f_{yx} \cdot 2r + f_{yy} \cdot 2s)2r + 2f_y $
+
+    $ \frac{\partial^2 z}{\partial r \partial s} = f_{xx} \cdot 2r + f_{xy} \cdot 2s + $
+    $ (f_{yx} \cdot 2r + f_{yy} \cdot 2s)2r + 2f_y $
+
+
 \end{document}

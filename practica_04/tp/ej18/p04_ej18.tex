@@ -2,4 +2,55 @@
 
 \begin{document}
 
+    \begin{enumerate}
+        \item 
+            \begin{itemize}
+                \item $ z = x^4 + x^2y $
+                \item $ x = s + 2t - u $
+                \item $ y = stu^2 $
+                \item $ (s,t,u) = (4,2,1) $
+                \item $\frac{\partial z}{\partial s} = $
+
+                    $ \left. 4x^3 + 2xy \right|_{x(s,t,u),y(s,t,u)} + \left. (x^2) \right|_{x(s,t,u),y(s,t,u)} tu^2 = $
+
+                    $ 4(s+2t-u)^3 + 2(s+2t-u)(stu^2) + (s+2t-u)^2tu^2 $
+
+                \item $\frac{\partial z}{\partial t} = $
+
+                    $ 2(\left. 4x^3 + 2xy \right|_{x(s,t,u),y(s,t,u)}) + $
+                    $\left. (x^2) \right|_{x(s,t,u),y(s,t,u)} su^2 = $
+
+                    $ 2(4(s+2t-u)^3 + 2(s+2t-u)(stu^2)) + $
+                    $ (s+2t-u)^2su^2 $
+
+                \item $\frac{\partial z}{\partial u} = $
+
+                    $ -(\left. 4x^3 + 2xy \right|_{x(s,t,u),y(s,t,u)}) + $
+                    $\left. (x^2) \right|_{x(s,t,u),y(s,t,u)} 2stu = $
+
+                    $ -(4(s+2t-u)^3 + 2(s+2t-u)(stu^2)) + $
+                    $ (s+2t-u)^22stu $
+            \end{itemize}
+        \item
+            \begin{itemize}
+                \item $ w = xy + yz + zx $
+                \item $ x = r\cos(\theta) $
+                \item $ y = r\sin(\theta) $
+                \item $ z = r\theta $
+                \item $ (r,\theta) = (2,\frac{\pi}{2}) $
+                \item $\frac{\partial w}{\partial r} = $
+                
+                    $ (y + z) \cdot \cos(\theta) + $
+                    $ (x + z) \cdot \sin(\theta) + $
+                    $ (x + y) \cdot \theta $
+
+                \item $\frac{\partial w}{\partial \theta} = $
+
+                    $ (y + z) \cdot -r\sin(\theta) + $
+                    $ (x + z) \cdot r\cos(\theta) + $
+                    $ (x + y) \cdot r $
+
+            \end{itemize}
+    \end{enumerate}
+
 \end{document}

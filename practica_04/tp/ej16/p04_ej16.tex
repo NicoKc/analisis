@@ -2,4 +2,85 @@
 
 \begin{document}
 
+    \begin{enumerate}
+        \item 
+            \begin{itemize}
+                \item $ z = x^2y^3 $
+                \item $ x = s\cos(t) $
+                \item $ y = s\sin(t) $
+            \end{itemize}
+
+            \begin{enumerate}
+                \item $\frac{\partial z}{\partial s} = $
+                    $ \frac{\partial f}{\partial x} \cdot \frac{\partial x}{\partial s} + $
+                    $ \frac{\partial f}{\partial y} \cdot \frac{\partial y}{\partial s} = $
+
+                    $ f_x(x(s),y(s)) \cdot \cos(t) + f_y(x(s),y(s)) \cdot \sin(t) = $
+
+                    $ \left. 2xy^3 \right|_{(x(s),y(s))} \cdot \cos(t) + $
+                    $ \left. 3x^2y^2 \right|_{(x(s),y(s))} \cdot \sin(t) = $
+
+                    $ 2s\cos(t)(s\sin(t))^3 \cdot \cos(t) + $
+                    $ 3(s\cos(t))^2(s\sin(t))^2 + \sin(t) $
+
+                \item $\frac{\partial z}{\partial t}$
+                    $ \frac{\partial f}{\partial x} \cdot \frac{\partial x}{\partial t} + $
+                    $ \frac{\partial f}{\partial y} \cdot \frac{\partial y}{\partial t} = $
+
+                    $ f_x(x(t),y(t)) \cdot (-s\sin(t)) + f_y(x(t),y(t)) \cdot s\cos(t) = $
+
+                    $ 2s\cos(t)(s\sin(t))^3 \cdot (-s\sin(t)) + $
+                    $ 3(s\cos(t))^2(s\sin(t))^2 \cdot s\cos(t) = $
+            \end{enumerate}
+
+        \item 
+            \begin{itemize}
+                \item $ z = \sin(x)\cos(y) $
+                \item $ x = st^2 $
+                \item $ y = s^2t $
+            \end{itemize}
+
+            \begin{enumerate}
+                \item $\frac{\partial z}{\partial s}$
+                    $ \frac{\partial f}{\partial x} \cdot \frac{\partial x}{\partial t} + $
+                    $ \frac{\partial f}{\partial y} \cdot \frac{\partial y}{\partial t} = $
+
+                    $ \cos(st^2)\cos(s^2t) \cdot t^2 + $
+                    $ \cos(st^2)(-\sin(s^2t)) \cdot 2st $
+
+                \item $\frac{\partial z}{\partial t}$
+                    $ \frac{\partial f}{\partial x} \cdot \frac{\partial x}{\partial t} + $
+                    $ \frac{\partial f}{\partial y} \cdot \frac{\partial y}{\partial t} = $
+
+                    $ \cos(st^2)\cos(s^2t) \cdot 2st + $
+                    $ \cos(st^2)(-\sin(s^2t)) \cdot s^2 $
+
+            \end{enumerate}
+
+        \item 
+            \begin{itemize}
+                \item $ z = e^{x+2y} $
+                \item $ x = \frac{s}{t} $
+                \item $ y = \frac{t}{s} $
+            \end{itemize}
+
+            \begin{enumerate}
+                \item $\frac{\partial z}{\partial s}$
+                    $ \frac{\partial f}{\partial x} \cdot \frac{\partial x}{\partial t} + $
+                    $ \frac{\partial f}{\partial y} \cdot \frac{\partial y}{\partial t} = $
+
+                    $ e^{\frac{s}{t}+\frac{2t}{s}} \cdot \frac{1}{t} $
+                    $ 2e^{\frac{s}{t}+\frac{2t}{s}} \cdot \frac{-t}{s^2} $
+
+                \item $\frac{\partial z}{\partial t}$
+                    $ \frac{\partial f}{\partial x} \cdot \frac{\partial x}{\partial t} + $
+                    $ \frac{\partial f}{\partial y} \cdot \frac{\partial y}{\partial t} = $
+
+                    $ e^{\frac{s}{t}+\frac{2t}{s}} \cdot \frac{-s}{t^2} $
+                    $ 2e^{\frac{s}{t}+\frac{2t}{s}} \cdot \frac{1}{s} $
+
+            \end{enumerate}
+
+    \end{enumerate}
+
 \end{document}

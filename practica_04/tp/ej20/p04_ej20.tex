@@ -2,4 +2,33 @@
 
 \begin{document}
 
+    \begin{itemize}
+        \item $ z = f(x-y) $
+        \item $ f: \real \to \real$
+        \item QvQ $\frac{\partial z}{\partial x} + \frac{\partial z}{\partial y} = 0$
+    \end{itemize}
+
+        $ z : \real^2 \to \real $
+
+        $ g : \real^2 \to \real $
+
+        $ z = (f \circ g)_{(x,y)} = f(g(x,y)) $
+
+        $ f = a, a \in \real $
+
+        \begin{itemize}
+            \item $ \frac{\partial z}{\partial x} = f^\prime(x-y) \cdot \frac{\partial g}{\partial x} = $
+
+            $ f^{\prime}(x-y) \cdot 1 $
+            \item $ \frac{\partial z}{\partial y} = f^\prime(x-y) \cdot \frac{\partial g}{\partial y} = $
+
+            $ f^{\prime}(x-y) \cdot -1 $
+        \end{itemize}
+
+        $\Rightarrow$
+    $\frac{\partial z}{\partial x} + \frac{\partial z}{\partial y} = $
+    $ f^{\prime}(x-y) \cdot 1 + f^{\prime}(x-y) \cdot -1 = $
+
+    $ f^{\prime}(x-y) - f^{\prime}(x-y) = 0 \qquad \blacksquare $
+
 \end{document}
