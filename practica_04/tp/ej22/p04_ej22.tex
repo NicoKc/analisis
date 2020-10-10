@@ -2,6 +2,55 @@
 
 \begin{document}
 
-$ $
+    \begin{enumerate}
+        \item 
+            \begin{itemize}
+                \item $f(x,y) = \frac{x}{x^2+y^2}$
+                \item $P = (1,2)$
+                \item $v = (3,5)$
+            \end{itemize}
+
+            $ u = \frac{v}{\norm*{v}} = (\frac{3}{\sqrt{34}},\frac{5}{\sqrt{34}})$
+
+            $ \grad f(x,y) = (f_x, f_y) $
+
+            $ f_x = \frac{x^2 + y^2 - 2x^2}{(x^2+y^2)^2} = \frac{y^2 - x^2}{(x^2+y^2)^2} $
+
+            $ f_y = \frac{\partial (x \cdot \frac{1}{x^2+y^2})}{\partial y} = $
+
+            $ x \cdot \frac{ -2y }{(x^2+y^2)^2} = $
+
+            $ \frac{ -2xy }{(x^2+y^2)^2} $
+
+            $ Df_u(1,2) = \grad f(1,2) \cdot u $
+
+            $ \grad f(1,2) = (\frac{1}{25}, \frac{-4}{25}) $
+
+            $ Df_u(1,2) = (\frac{1}{25}, \frac{-4}{25}) \cdot (\frac{3}{\sqrt{34}},\frac{5}{\sqrt{24}}) = $
+
+            $ \frac{1}{25}\cdot \frac{3}{\sqrt{34}} + \frac{-4}{25} \cdot \functionalderivative{5}{\sqrt{34}} $
+
+        \item 
+            \begin{itemize}
+                \item $f(x,y,z) = xe^y + ye^z + ze^x $
+                \item $P = (0,0,0)$
+                \item $v = (5,1,-2)$
+            \end{itemize}
+
+            $Df_u(0,0,0) = \grad f(0,0,0) \cdot u $
+
+            $ u = \frac{v}{\norm*{v}} = \frac{(5,1,-2)}{\sqrt{30}} = (\frac{5}{\sqrt{30}},\frac{1}{\sqrt{30}},\frac{-2}{\sqrt{30}}) $
+
+            $ \grad f(0,0,0) = (f_x,f_y) $
+
+            $ f_x = e^y + ze^x $
+
+            $ f_y = e^z + xe^y $
+
+            $ \grad f(0,0,0) = (1,1) $
+
+            $ Df_u(0,0,0) = (1,1) \cdot (\frac{5}{\sqrt{30}},\frac{1}{\sqrt{30}},\frac{-2}{\sqrt{30}}) = (\frac{5}{\sqrt{30}},\frac{1}{\sqrt{30}},\frac{-2}{\sqrt{30}}) $
+
+    \end{enumerate}
 
 \end{document}

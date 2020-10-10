@@ -2,6 +2,61 @@
 
 \begin{document}
 
-$ $
+    $ f(x,y) = \left\{
+    \begin{array}{ll}
+        \frac{\abs*{x}y}{\sqrt{x^2+y^2}} \qquad si (x,y) \neq (0,0)\\
+        0 \qquad si (x,y) = (0,0)\\
+    \end{array}
+    \right.$
+
+    $ \lim_{(x,y) \to (0,0)} f(x,y) = 0 \Rightarrow $
+
+    $ \exists \delta(\epsilon) >0\ tq\ \norm*{(x,y)} < \delta \Rightarrow \abs*{f(x,y)-0} < \epsilon$
+
+    $\abs*{\frac{\abs*{x}y}{\sqrt{x^2+y^2}}} = $
+
+    $\frac{\abs*{x}\abs*{y}}{\sqrt{x^2+y^2}} = $
+    
+    $\frac{\abs*{x}\abs*{y}}{\norm*{(x,y)}} \leq $
+
+    $\frac{\norm*{(x,y)}\cancel{^2}}{\cancel{\norm*{(x,y)}}} < \delta < \epsilon$
+
+    $\Rightarrow f$ es continua en el origen $\qquad \blacksquare$
+
+    $\lim_{h\to 0} \frac{f(hv_1, h_v2)}{h} $
+
+    $\lim_{h\to 0} \frac{1}{h} \cdot \frac{\abs*{hv_1}hv_2}{\sqrt{(hv_1)^2+(hv_2)^2}} = $
+    
+    $\lim_{h\to 0} \frac{1}{h} \cdot \frac{\abs*{hv_1}hv_2}{\sqrt{h^2(v_1^2+v_2^2)}} = $
+
+    $\lim_{h\to 0} \frac{1}{h} \cdot \frac{\abs*{hv_1}hv_2}{\sqrt{h^2}\sqrt{v_1^2+v_2^2}} = $
+    
+    $\lim_{h\to 0} \frac{1}{h} \cdot \frac{\abs*{hv_1}hv_2}{\sqrt{h^2}\norm*{(v_1,v_2)}} \stackrel{\norm*{(v_1,v_2)}=1}{=} $
+    
+    $\lim_{h\to 0} \frac{1}{h} \cdot \frac{\abs*{hv_1}hv_2}{\abs*{h}} = $
+
+    $\lim_{h\to 0} \frac{1}{\cancel{h}} \cdot \frac{\cancel{\abs*{h}}\abs*{v_1}\cancel{h}v_2}{\cancel{\abs*{h}}} = $
+
+    $\lim_{h\to 0} \abs*{v_1}v_2 = \abs*{v_1}v_2 \qquad \blacksquare$
+
+    $f_x = \lim_{h \to 0} \frac{f(h,0)- f(0,0)}{h} =  $
+
+    $f_x = \lim_{h \to 0} \frac{\frac{0}{\abs*{h}}}{h} = 0 $
+
+    $f_y = \lim_{h \to 0} \frac{\frac{0}{\abs*{h}}}{h} = 0 $
+
+    $\lim_{(x,y) \to (0,0)} \frac{f(x,y) - f(0,0) - f_x(x-0) - f_y(y-0)}{\norm*{(x,y)}} \stackrel{?}{=} 0 $
+
+    $\lim_{(x,y) \to (0,0)} \frac{\frac{\abs*{x}y}{\sqrt{x^2+y^2}}}{\sqrt{x^2+y^2}} = $
+
+    $\lim_{(x,y) \to (0,0)} \frac{\abs*{x}y}{\norm{(x,y)^2}} = 1 $
+
+    $ \lim_{(x,y) \to (0,0)} \frac{\abs*{x}y}{x^2+y^2} $
+
+    $ y = mx $
+
+    $ \lim_{(x,y) \to (0,0)} \frac{mx^2}{2x^2} = \frac{m}{2} \neq 0$
+
+    $\Rightarrow f$ no es diferenciable en el origen
 
 \end{document}
