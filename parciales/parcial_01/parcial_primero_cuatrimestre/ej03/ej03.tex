@@ -1,0 +1,66 @@
+\documentclass[../parcial.tex]{subfiles}
+
+\begin{document}
+
+    $ f(x,y) = \sqrt[3]{x^3+8y^3}$
+
+    \section*{Diferenciabilidad en $(0,0)$}
+
+    f es diferenciable en $(0,0) \Leftrightarrow$
+
+    $ \exists L \in \real : \lim_{(x,y)\to (0,0)} \frac{f(x,y) - f(0,0) - \grad f (0,0) \cdot(x-0,y-0)}{\norm*{(x,y)}} = L \wedge L = 0 $
+
+    \section*{Busco $\grad f(0,0)$}
+
+    $ \grad f(0,0) = (f_x(0,0), f_y(0,0)) $
+
+    \subsection*{Por definición las derivadas parciales}
+    
+    \begin{itemize}
+        \item $ f_x(0,0) = \lim_{h\to0} \frac{f(h,0) - f(0,0)}{h} = $
+        
+            $ \lim_{h\to0} f(h,0) - f(0,0) \cdot \frac{1}{h} $
+
+            $ \lim_{h\to0} \sqrt[3]{h^3} - 0 \cdot \frac{1}{h} $
+
+            $ \lim_{h\to0} h \cdot \frac{1}{h} = 1 $
+
+        \item $ f_y(0,0) = \lim_{h\to0} \frac{f(0,h) - f(0,0)}{h} = $
+
+            $ f_y(0,0) = \lim_{h\to0} f(0,h) - f(0,0) \cdot \frac{1}{h} $
+
+            $ f_y(0,0) = \sqrt[3]{8h^3} - 0 \cdot \frac{1}{h} = 2$
+
+    \end{itemize}
+
+    $\lim_{(x,y)\to (0,0)} \frac{f(x,y) - f(0,0) - \grad f (0,0) \cdot(x,y)}{\norm*{(x,y)}} = $
+
+    $\lim_{(x,y)\to (0,0)} \frac{\sqrt[3]{x^3+8y^3} - 0 - (1,2)\cdot(x,y)}{\norm*{(x,y)}} = $
+
+    $\lim_{(x,y)\to (0,0)} \frac{\sqrt[3]{x^3+8y^3} -x - 2y}{\norm*{(x,y)}} = $
+
+    $ y = x $
+
+    $\lim_{(x,y)\to (0,0)} \frac{\sqrt[3]{x^3+8y^3} -x - 2y}{\norm*{(x,y)}} = $
+
+    $\lim_{(x,y)\to (0,0)} \frac{\sqrt[3]{x^3+8y^3}}{\sqrt{x^2+y^2}} - \stackrel{\star}{\frac{x+2y}{\sqrt{x^2+y^2}}} = $
+
+    $\star: \lim_{(x,y) \to (0,0)} \frac{x+2y}{\sqrt{x^2+y^2}} $
+
+    Por $y = x$
+
+    $\lim_{x \to 0} \frac{3x}{\sqrt{2x^2}} = $
+
+    $\lim_{x \to 0} \frac{3x}{\sqrt{2} \abs*{x}} $
+
+    $\lim_{x \to 0+} \frac{3x}{\sqrt{2} x} = 3 $
+
+    $\lim_{x \to 0-} \frac{3x}{\sqrt{2}(-x)} = -3 $
+
+    $ \Rightarrow \nexists \lim_{(x,y) \to (0,0)} \frac{x+2y}{\sqrt{x^2+y^2}}$
+
+    $ \Rightarrow \nexists \lim_{(x,y)\to (0,0)} \frac{\sqrt[3]{x^3+8y^3}}{\sqrt{x^2+y^2}} - \stackrel{\star}{\frac{x+2y}{\sqrt{x^2+y^2}}}$
+
+    $ \Rightarrow $ f no es diferenciable en $(0,0)$
+
+\end{document} 

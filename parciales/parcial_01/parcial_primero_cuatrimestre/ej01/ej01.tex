@@ -1,0 +1,87 @@
+\documentclass[../parcial.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item 
+
+            $r: \real \to \real^3 $
+
+            $C: r(t) = (r_1(t), r_2(t), r_3(t)) = (x,y,z)$
+
+            $r_1: \real \to \real $
+
+            $r_2: \real \to \real $
+
+            $r_3: \real \to \real $
+
+            $\left\{
+                \begin{array}{ll}
+                    y^2 + z^2 = 4 : \star\\
+                    -x + y + z = 0
+                \end{array}
+            \right.$
+
+            $\star$ es un circulo con centro en $(0,0)$ y radio $\sqrt{4}=2$
+
+            $ \Rightarrow $ en polares $\star: 2\cos(t) + 2\sin(t) = 1$
+
+            $ \Rightarrow $ Propongo $\left\{
+                \begin{array}{ll}
+                    y = 2\sin(t) \\
+                    z = 2\cos(t)
+                \end{array}
+            \right. : \star^\prime$
+
+            Se que $ -x + y + z = 0 \Rightarrow$
+
+            Se que $ x = y + z \stackrel{\star^\prime}{\Rightarrow}$
+
+            $ x = 2\sin(t) + 2\cos(t) \Rightarrow x = 2(\sin(t)+ \cos(t)) \star{\prime\prime}$
+
+            Por $ \star^\prime \wedge \star{\prime\prime} : $
+
+            $\left\{
+                \begin{array}{ll}
+                    x = 2(\sin(t) + \cos(t)) \\
+                    y = 2\sin(t) \\
+                    z = 2\cos(t)
+                \end{array}
+            \right. = C$
+            
+            $\Rightarrow C: r(t)=(2(\sin(t)+\cos(t), 2\sin(t), 2\cos(t)))$
+
+        \item $P \in C \Leftrightarrow$
+
+            $\exists k \in \real : r(k) = (2,2,0)$
+
+            $\Leftrightarrow \left\{
+                \begin{array}{ll}
+                    2 = 2(\sin(k) + \cos(k)) \\
+                    2 = 2\sin(k) : \triangle\\
+                    0 = 2\cos(k) : \hexagon
+                \end{array}
+            \right. = C$
+
+            Por $\hexagon: 2\cos(k) = 0 \Leftrightarrow $
+
+            $ k \in {\frac{1}{2\pi},\frac{3}{2\pi}} $
+
+            Por $ \triangle \wedge \hexagon: 2 = 2\sin(k) \Leftrightarrow 1 = \sin(k) $
+
+            $ 1 = \sin(k) \wedge k \in {\frac{1}{2\pi},\frac{3}{2\pi}} \Leftrightarrow \frac{1}{2\pi} $
+
+            $\Rightarrow r(1) = P \Rightarrow P \in  C \square$
+
+            $ L $ es la recta tangente de C $\Leftrightarrow $ $z = \lambda \cdot r^\prime(0) + P$
+
+            Al ser r continua por ser funciones trigonometricas: 
+            $ r^\prime(t) = (2(\cos(t)-\sin(t)), 2\cos(t), -2\sin(t)) $
+
+            $ \Rightarrow r^\prime(\frac{1}{2\pi}) = (-2, 0, -2) $
+
+            $\Rightarrow L : z = \lambda(-2,0,-2) + (2,2,0) $
+
+    \end{enumerate}
+
+\end{document}
