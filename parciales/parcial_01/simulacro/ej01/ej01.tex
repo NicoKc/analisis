@@ -1,0 +1,101 @@
+\documentclass[../parcial.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item 
+            $ $
+
+            $ r: \real \to \real^3 $
+
+            $ r(t) = (r_1(t),r_2(t),r_3(t)) = (x,y,z)$
+
+            $ r_1: \real \to \real $
+
+            $ r_2: \real \to \real $
+
+            $ r_3: \real \to \real $
+
+            $ $
+
+            $ $
+
+            $\left\{
+                \begin{array}{ll}
+                    x^2 + y^2 - z = 0 \Rightarrow z = x^2 + y^2\\
+                    x^2 - 4x + y^2 + z = 0 \Rightarrow z = 4x - x^2 - y^2
+                \end{array}
+            \right. \Rightarrow$
+
+            $\left\{
+                \begin{array}{ll}
+                    z = x^2 + y^2 : \star\\
+                    x^2 - 4x + y^2 + z = 0 \stackrel{\star}{\Rightarrow} x^2 + y^2 = 4x - x^2 - y^2 : \star^\prime
+                \end{array}
+            \right.$
+
+            $\star^\prime: x^2 + y^2 = 4x - x^2 - y^2 \Rightarrow$
+
+            $2x^2 - 4x + 2y^2 = 0 \Rightarrow$
+
+            $x^2 - 2x + y^2 = 0 \Rightarrow$
+
+            $(x-1)^2 - 1 + y^2 = 0 \Rightarrow$
+
+            $(x-1)^2 + y^2 = 1 $ Que en $\real^2$ es un circulo de radio $1$ con centro en $(1,0)$ $\Rightarrow$
+
+            $\left\{
+                \begin{array}{ll}
+                    x - 1 = \cos(t) \Rightarrow x = \cos(t) + 1 = r_1(t)\\
+                    y = \sin(t) = r_2(t)\\
+                    z = x^2 + y^2 \Rightarrow z = (\cos(t) + 1)^2 + \sin(t)^2 = r_3(t)
+                \end{array}
+            \right. \Rightarrow$
+
+            $r(t) = (\cos(t)+1, \sin(t), (\cos(t)+1)^2 + \sin(t)^2) = C$
+
+        \item QvQ $ P = (1-\frac{\sqrt(2)}{2}, \frac{\sqrt{2}}{2}, 2- \sqrt{2}) \in C \Leftrightarrow$
+
+            $ \exists k \in \real : r(k) = P \Leftrightarrow$
+
+            $\left\{
+                \begin{array}{ll}
+                    \cos(k) + 1 = 1-\frac{\sqrt(2)}{2}\\
+                    \sin(k) = \frac{\sqrt{2}}{2}\\
+                    (\cos(k) + 1)^2 + \sin(k)^2 = 2 - \sqrt{2}
+                \end{array}
+            \right. \Rightarrow$
+
+            $ \sin(k) = \frac{\sqrt{2}}{2} \Leftrightarrow k_1 = \frac{\pi}{4} \vee k_2 = \frac{3\pi}{4}$
+
+            $ \cos(k_1) + 1 = \frac{\sqrt{2}}{2} + 1 \Rightarrow \cancel{k_1} $
+
+            $ \cos(k_2) + 1 = -\frac{\sqrt{2}}{2} + 1 \checked$
+
+            $(\cos(k_2) + 1)^2 + \sin(k_2)^2 = (-\frac{\sqrt{2}}{2} + 1)^2 + 2 = \frac{1}{2} - \sqrt{2} + 1 + \frac{1}{2} = 2 - \sqrt{2} \checked$
+
+            $ \Rightarrow r(k) = P \Rightarrow P \in C $
+
+            $ (x,y,z) = \lambda\cdot r^\prime(k) + P$
+
+            $\left\{
+                \begin{array}{ll}
+                    r_1^\prime(t) = -\sin(t) \\
+                    r_2^\prime(t) = \cos(t) \\
+                    r_3^\prime(t) = -2\sin(k)
+                \end{array}
+            \right. \Rightarrow$
+
+            $\left\{
+                \begin{array}{ll}
+                    r_1^\prime(k) = -\frac{\sqrt{2}}{2} \\
+                    r_2^\prime(k) = -\frac{\sqrt{2}}{2} \\
+                    r_3^\prime(k) = -\sqrt{2}
+                \end{array}
+            \right. \Rightarrow$
+
+            $(x,y,z) = \lambda\cdot(-\frac{\sqrt{2}}{2}, -\frac{\sqrt{2}}{2}, -\sqrt{2}) + (1-\frac{\sqrt(2)}{2}, \frac{\sqrt{2}}{2}, 2- \sqrt{2})$
+
+    \end{enumerate}
+
+\end{document}

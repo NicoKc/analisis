@@ -1,0 +1,52 @@
+\documentclass[../parcial.tex]{subfiles}
+
+\begin{document}
+
+    $ f: \real^2 \to \real $
+
+    $P = (1,2,f(1,2))$
+
+    $\Phi : z = x + 2y - 1$
+
+    $ f(1,2) = z = 1 + 4 - 1 = 4$
+
+    $ P = (1, 2, 4)$
+
+    $ F(s,t) = f(3s + t^2,2s^2+2t) $
+
+    $ F(0,1) = f(1,2) $
+
+    $ P_2 = (0,1,4) $
+
+    $ $
+
+    $ \grad F(s,t) = (F_s(s,t), F_t(s,t))$
+
+    \begin{itemize}
+        \item $ F_s(s,t) = f_x(x(s,t),y(s,t))\cdot x_s(s,t) + f_y(x(s,t), y(s,t))\cdot y_s(s,t) = $
+
+            $ f_x(x(s,t),y(s,t))\cdot 3 + f_y(x(s,t), y(s,t))\cdot 4s $
+
+            $ \Rightarrow F_s(0,1) = f_x(1,2) \cdot 3 + f_y(1,2) \cdot 0 $
+
+            $ \Rightarrow F_s(0,1) = 1 \cdot 3 + 2 \cdot 0 = 3 $
+
+        \item $ F_t(s,t) = f_x(x(s,t),y(s,t))\cdot x_t(s,t) + f_y(x(s,t), y(s,t))\cdot y_t(s,t) = $
+        
+            $ f_x(x(s,t),y(s,t))\cdot 2t + f_y(x(s,t), y(s,t))\cdot 2 $
+
+            $ \Rightarrow F_t(0,1) = f_x(1,2)\cdot 2 + f_y(1,2)\cdot 2 $
+
+            $ \Rightarrow F_t(0,1) = 1\cdot 2 + 2\cdot 2  = 6$
+
+    \end{itemize}
+
+    $ z = \grad F(0,1)\cdot(s,t-1) + F(0,1) = $
+
+    $ \grad (3,6)\cdot(s,t-1) + 4 = $
+
+    $ 3s + 6(t-1) + 4 $
+
+    $\Rightarrow z = 3s + 6t -2$
+    
+\end{document} 

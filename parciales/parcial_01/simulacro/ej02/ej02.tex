@@ -1,0 +1,53 @@
+\documentclass[../parcial.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item $\lim_{(x,y) \to ( 0,0)} \frac{(x-1)^2\sin(x^2)y}{x^2 + y^4}$
+
+            $ f(x,y) = \frac{(x-1)^2\sin(x^2)y}{x^2 + y^4} $
+
+            QvQ $ \exists g(x,y) : lim_{(x,y) \to (0,0)} g(x,y) = 0 \wedge 0 \leq \abs*{f(x,y)} \leq g(x,y)$
+
+            $ \abs*{\frac{(x-1)^2\sin(x^2)y}{x^2 + y^4}} = $
+
+            $ \frac{(x-1)^2\abs*{\sin(x^2)}\abs*{y}}{x^2 + y^4} \stackrel{\abs*{\sin(k)} \stackrel{k \to 0}{\leq} \abs*{k}}{\leq}$
+
+            $ \frac{(x-1)^2\abs*{x^2}\abs*{y}}{x^2 + y^4} = $
+
+            $ \frac{(x-1)^2x^2\abs*{y}}{x^2 + y^4} = $
+            
+            $ \frac{x^2}{x^2 + y^4}(x-1)^2\abs*{y} $
+
+            $ \qquad y^4 \leq 0 \Rightarrow x^2 + y^4 \leq x^2 \Rightarrow 1 \leq \frac{x^2}{x^2+y^4} :\star $
+
+            $ \frac{x^2}{x^2 + y^4}(x-1)^2\abs*{y} \stackrel{\star}{\leq} $
+
+            $ (x-1)^2\abs*{y} \stackrel{(x,y) \to (0,0)}{\to 0} \Rightarrow$
+
+            $ g(x,y) = (x-1)^2\abs*{y} $
+
+            $ 0 \leq \abs*{f(x,y)} \leq \stackrel{(x,y) \to 0 \Rightarrow \to 0}{(x-1)^2\abs*{y}} $
+
+            $ \Rightarrow $ por sandwich $\abs*{f(x,y)} \to 0$ cuando $(x,y) \to 0$
+
+            $ \Rightarrow \lim_{(x,y) \to ( 0,0)} \frac{(x-1)^2\sin(x^2)y}{x^2 + y^4} = 0 $
+
+        \item $\lim_{(x,y) \to (0,0) \frac{e^{xy}-1}{x^2+y^2}} = L_2$
+
+            \begin{itemize}
+
+                \item $y = 0 \Rightarrow \lim_{x \to 0} \frac{e^{x0}-1}{x^2} = $
+
+                    $\lim_{x \to 0} \frac{0}{x^2} = 0$
+
+                \item $y = x \Rightarrow \lim_{x \to 0} \frac{e^{x^2}-1}{2x^2} \stackrel{"\frac{0}{0}\ por\ LH"}{=}$
+
+                    $ \lim{x \to 0} \frac{2\cancel{x}e^{x^2}}{4\cancel{x}} \stackrel{e^{x^2} \to 1}{=} \frac{1}{2} $
+            \end{itemize}
+
+            $\frac{1}{2} \neq 0 \Rightarrow \nexists L_2$
+
+    \end{enumerate}
+
+\end{document} 
