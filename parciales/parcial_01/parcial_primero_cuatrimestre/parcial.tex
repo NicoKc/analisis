@@ -11,10 +11,21 @@
 \usepackage{bbding}
 \usepackage{pifont}
 \usepackage{wasysym}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+
 
 \begin{document}
 
-    \pagestyle{plain}
+    \pagestyle{fancy}
+    \fancyhf{}
+    \rhead{348/15}
+    \lhead{Nicolas A. Kinaschuk}
+    \chead{Lic. cs de la computación}
+    \cfoot{\thepage}
+
+    \renewcommand{\headrulewidth}{2pt}
+    \renewcommand{\footrulewidth}{1pt}
 
     \begin{enumerate}
         \item \subfile{ej01/ej01} $ $
