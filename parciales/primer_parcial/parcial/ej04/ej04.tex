@@ -1,0 +1,72 @@
+\documentclass[../parcial.tex]{subfiles}
+
+\begin{document}
+
+    \section*{Datos}
+
+    \begin{itemize}
+        \item $f: \real^2 \to \real$
+        \item $P = (2,1,f(2,1))$
+        \item $z = 2 - 3x + y = \Pi(x,y)$
+        \item $f(2,1) = \Pi(2,1) = -3$
+        \item $f$ es diferenciable
+        \item $f_x(2,1) = \Pi_x(2,1) = -3 $
+        \item $f_y(2,1) = \Pi_y(2,1) = 1 $
+        \item $x(s,t) = e^t + 1$
+        \item $y(s,t) = s^2 + 2t$
+        \item $x(1,0) = 2$
+        \item $y(1,0) = 1$
+        \item $v = (4,1)$
+        \item $F(s,t) = f(x(s),y(s))$
+    \end{itemize}
+
+    \section*{Busco $\grad F(1,0)$}
+
+    $ \grad F(s,t) = (F_s(s,t), F_t(s,t)) $
+
+    $ $
+
+    $f(x,y)$ es diferenciable en $(2,1) \wedge f(x(s,t), y(s,t)) = f(2,1) \wedge x(s,t), y(s,t)$ son diferenciables y continuas
+    
+    $ \Rightarrow $ Por regla de la cadena
+
+    \begin{itemize}
+        \item $ F_s(s,t) = f_x(x(s,t),y(s,t))\cdot x_s(s,t) + f_y(x(s,t), y(s,t))\cdot y_s(s,t) = $
+
+            $f_x(x(s,t),y(s,t))\cdot 0 + f_y(x(s,t), y(s,t))\cdot 2s$
+
+            $ \qquad \Rightarrow F_s(1,0) = f_x(2,1)\cdot 0 + f_y(2, 1)\cdot 2(2) =$
+
+            $ \qquad 0 + f_y(2,1) \cdot 2 = 2 $
+
+        \item $ F_t(s,t) = f_x(x(s,t),y(s,t))\cdot x_t(s,t) + f_y(x(s,t), y(s,t))\cdot y_t(s,t) = $
+
+            $f_x(x(s,t),y(s,t))\cdot e^t + f_y(x(s,t), y(s,t))\cdot 2 $
+
+            $ \qquad \Rightarrow F_t(1,0) = f_x(2,1)\cdot e^0 + f_y(2,1)\cdot 2 =$
+
+            $ \qquad (-3)\cdot1 + 1 \cdot 2 = -1$
+
+    \end{itemize}
+
+    $ \Rightarrow \grad F(1,0) = (2,-1) $
+
+    \section*{Busco versor unitario de $v$}
+
+    $ u = \frac{v}{\norm*{v}} = \frac{(4,1)}{\sqrt{17}} = (\frac{4}{\sqrt{17}}, \frac{1}{\sqrt{17}}) $
+
+    \section*{Busco derivada direccional}
+
+    Como se que $F$ es diferenciable en $(1,0)$
+
+    $\qquad \Rightarrow D_uF(1,0) = \grad F(1,0) \cdot (\frac{4}{\sqrt{17}}, \frac{1}{\sqrt{17}})$
+
+    $\qquad \Rightarrow D_uF(1,0) = (2,-1) \cdot (\frac{4}{\sqrt{17}}, \frac{1}{\sqrt{17}}) = \frac{7}{\sqrt{17}}$
+
+    $ $
+
+    \section*{Respuesta}
+
+    La derivada en la dirección $(4,1)$ de $F$ en el punto $(1,0)$ es $\frac{7}{\sqrt{17}} \qquad \square$
+
+\end{document} 

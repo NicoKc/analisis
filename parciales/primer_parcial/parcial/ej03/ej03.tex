@@ -1,0 +1,73 @@
+\documentclass[../parcial.tex]{subfiles}
+
+\begin{document}
+
+    $ f(x,y) = \qquad \left\{
+        \begin{array}{ll}
+            \frac{x^3e^y+3x^2y}{x^2+y^2} \qquad si\ (x,y) \neq (0,0) \\
+            0 \qquad si\ (x,y) = (0,0)
+        \end{array}
+    \right.$
+
+    \section*{Diferenciabilidad en $(0,0)$}
+
+    f es diferenciable en $(0,0) \Leftrightarrow$
+
+    $ \exists L \in \real : \lim_{(x,y)\to (0,0)} \frac{f(x,y) - f(0,0) - \grad f (0,0) \cdot(x-0,y-0)}{\norm*{(x,y)}} = L \wedge L = 0 $
+
+    \section*{Busco $\grad f(0,0)$}
+
+    $ \grad f(0,0) = (f_x(0,0), f_y(0,0)) $
+
+    \subsection*{Por definición}
+    
+    \begin{itemize}
+        \item $ f_x(0,0) = \lim_{h\to0} \frac{f(h,0) - f(0,0)}{h} = $
+
+            $ \lim_{h\to0} f(h,0) - f(0,0) \cdot \frac{1}{h} = $
+
+            $ \lim_{h\to0} \frac{\cancel{h^3}}{\cancel{h^3}}  = 1$
+
+        \item $ f_y(0,0) = \lim_{h\to0} \frac{f(0,h) - f(0,0)}{h} = $
+
+            $ f_y(0,0) = \lim_{h\to0} f(0,h) - f(0,0) \cdot \frac{1}{h} $
+
+            $ f_y(0,0) = \lim_{h\to0} \frac{0}{h^2} \cdot \frac{1}{h} = 0$
+    \end{itemize}
+
+    $ \grad f(0,0) = (1, 0) $
+
+    $\Rightarrow \lim_{(x,y)\to (0,0)} \frac{f(x,y) - f(0,0) - \grad f (0,0) \cdot(x-0,y-0)}{\norm*{(x,y)}} = $
+
+    $\Rightarrow \lim_{(x,y)\to (0,0)} \frac{ \frac{x^3e^y+3x^2y}{x^2+y^2} - 0 - (1,0) \cdot(x-0,y-0)}{\norm*{(x,y)}} = $
+
+    $\Rightarrow \lim_{(x,y)\to (0,0)} \frac{ \frac{x^3e^y+3x^2y}{x^2+y^2} - x}{\norm*{(x,y)}} = $
+
+    $\Rightarrow \lim_{(x,y)\to (0,0)} \frac{x^3e^y+3x^2y}{x^2+y^2}\frac{1}{\sqrt{x^2+y^2}} - \frac{x}{\sqrt{x^2+y^2}} = $
+
+    $\Rightarrow \lim_{(x,y)\to (0,0)} \frac{x^3e^y+3x^2y}{x^2+y^2}\frac{1}{\sqrt{x^2+y^2}} - \stackrel{\star}{\lim_{(x,y)\to (0,0)} \frac{x}{\sqrt{x^2+y^2}}} = $
+
+        \begin{itemize}
+            \item $\star: \lim_{(x,y)\to (0,0)} \frac{x}{\sqrt{x^2+y^2}} $
+            
+                Por la recta $y = x$
+
+                $\lim_{x \to 0} \frac{x}{\sqrt{x^2+x^2}} = $
+
+                $\lim_{x \to 0} \frac{x}{\sqrt{2} \abs*{x}} = $
+
+                $\lim_{x \to 0^+} \frac{x}{\sqrt{2} x} = \frac{1}{\sqrt{2}} $
+
+                $\lim_{x \to 0^-} \frac{x}{\sqrt{2}(-x)} = -\frac{1}{\sqrt{2}} $
+
+                $\Rightarrow \nexists \lim_{(x,y)\to (0,0)} \frac{x}{\sqrt{x^2+y^2}}$
+
+        \end{itemize}
+
+    $\Rightarrow \lim_{(x,y)\to (0,0)} \frac{x^3e^y+3x^2y}{x^2+y^2}\frac{1}{\sqrt{x^2+y^2}} - \stackrel{\star}{\lim_{(x,y)\to (0,0)} \frac{x}{\sqrt{x^2+y^2}}} \wedge \nexists \star $
+
+    $\Rightarrow $ Por algebra del limites no $\nexists$ la resta de limites por lo tanto $\nexists L$
+
+    $\Rightarrow f(x,y)$ no es diferenciable en el $(0,0)$
+
+\end{document} 

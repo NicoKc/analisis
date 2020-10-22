@@ -1,0 +1,99 @@
+\documentclass[../parcial.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item 
+
+            $r: \real \to \real^3 $
+
+            $C: r(t) = (r_1(t), r_2(t), r_3(t)) = (x,y,z)$
+
+            $r_1: \real \to \real $
+
+            $r_2: \real \to \real $
+
+            $r_3: \real \to \real $
+
+            $ $
+
+            $\left\{
+                \begin{array}{ll}
+                    4 = x^2 + 4y^2 : $ Describe un elipse con centro en $(0,0)\\
+                    2 = z - x : $ Describe un plano $ \Pi
+                \end{array}
+            \right.$
+
+            $ $
+
+            $ 4 = x^2 + 4y^2 \equiv 1 = \frac{x^2}{2^2} + \frac{y^2}{1^2} \equiv \left\{
+                \begin{array}{ll}
+                    x = 2\cos(t) \\
+                    y = 1\sin(t)
+                \end{array}
+            \right.\ t \in \{0, 2\pi) : \star$
+            
+            $ $
+
+            $ \Pi : z = 2 + x \stackrel{\star}{\Rightarrow} $
+
+            $ z = 2 + 2\cos(t) \Rightarrow$
+
+            $ C: r(t) = \left\{
+                \begin{array}{ll}
+                    r_1(t) = 2\cos(t) \\
+                    r_2(t) = \sin(t) \\
+                    r_3(t) = 2 + 2\cos(t)
+                \end{array}
+            \right.\ t \in \{0, 2\pi) \Rightarrow $
+
+            $ $
+
+            $ C: r(t) = (2\cos(t), \sin(t), 2+2\cos(t)) $ con $ t \in \{0, 2\pi) \qquad \square $
+
+        \item 
+            \begin{enumerate}
+                \item $ P = (2,0,4) \in C \Leftrightarrow$
+                
+                    $ $
+
+                    $ \exists k \in \{0, 2\pi) : r(k) = (2,0,4) \Leftrightarrow $
+
+                    $ $
+
+                    $\qquad \left\{
+                        \begin{array}{ll}
+                            r_1(k) = 2\cos(k) = 2\\
+                            r_2(k) = \sin(k) = 0\\
+                            r_3(k) = 2 + 2\cos(k) = 4
+                        \end{array}
+                    \right.\ k \in \{0, 2\pi)$
+
+                    $ $
+
+                    $ r_2(k) = 0 \Leftrightarrow k \in (0, \pi) :\star $
+
+                    $ r_1(k) = 0 \wedge \star \Leftrightarrow k = 0$
+
+                    $ r_3(0) = 2 + 2\cos(0) = 4 \checked $
+
+                    $ $
+
+                    $ \Rightarrow r(0) = (2,0,4) \Rightarrow (2,0,4) \in C \qquad \square $
+
+                \item Quiero hallar $ L $ es la recta tangente a $C$ en el punto $P$
+                
+                    $r$ esta compuesta por funciones trigonometricas continuas y derivables $\Rightarrow$
+
+                    $ \exists r^\prime(k) \wedge L = \lambda \cdot r^\prime(0) + P $
+
+                    $ \qquad r^\prime(k) = (-2\sin(k),\cos(k),-2\sin(k)) $
+
+                    $ \Rightarrow r^\prime(0) = (0,1,0) $
+
+                    $ \Rightarrow L = \lambda \cdot (0,1,0) + (2,0,4) \qquad \square$
+
+            \end{enumerate}
+    \end{enumerate}
+
+\end{document}

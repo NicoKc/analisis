@@ -1,0 +1,30 @@
+\documentclass[../parcial.tex]{subfiles}
+
+\begin{document}
+
+    $ f(x,y) = $
+
+    \section*{Diferenciabilidad en $a$}
+
+    f es diferenciable en $a \Leftrightarrow$
+
+    $ \exists L \in \real : \lim_{(x,y)\to (0,0)} \frac{f(x,y) - f(0,0) - \grad f (0,0) \cdot(x-0,y-0)}{\norm*{(x,y)}} = L \wedge L = 0 $
+
+    \section*{Busco $\grad f(0,0)$}
+
+    $ \grad f(0,0) = (f_x(0,0), f_y(0,0)) $
+
+    \subsection*{Por definición}
+    
+    \begin{itemize}
+        \item $ f_x(0,0) = \lim_{h\to0} \frac{f(h,0) - f(0,0)}{h} = $
+        
+            $ \lim_{h\to0} f(h,0) - f(0,0) \cdot \frac{1}{h} $
+
+        \item $ f_y(0,0) = \lim_{h\to0} \frac{f(0,h) - f(0,0)}{h} = $
+
+            $ f_y(0,0) = \lim_{h\to0} f(0,h) - f(0,0) \cdot \frac{1}{h} $
+    \end{itemize}
+    
+
+\end{document} 

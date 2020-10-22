@@ -1,0 +1,88 @@
+\documentclass[../parcial.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item $ \lim_{(x,y) \to (0,0)} f(x,y) $
+
+            $f(x,y) = \frac{(x-1)^2x^2y^2}{(x^2+y^2)^{\frac{3}{2}}}$
+
+            \subsection*{Pruebo por curvas}
+
+            \begin{itemize}
+                \item iterado $x = 0$
+
+                    $\lim_{y\to0} f(0,y) = \frac{0}{(y^2)^{\frac{3}{2}}} = 0$
+
+                \item iterado $y = 0$
+
+                    $\lim_{x\to0} f(x,0) = \frac{0}{(x^2)^{\frac{3}{2}}} = 0$
+
+            \end{itemize}
+
+            si $\exists L: \lim_{(x,y) \to (0,0)} f(x,y) \Rightarrow L = 0 $
+
+            \subsection*{Intento demostrar por sandwich}
+        
+            $ \exists g(x,y): \lim{(x,y)\to(0,0)} g(x,y) = 0 \wedge 0 \leq \abs*{f(x,y)} \leq \abs*{g(x,y)} $
+
+            $ \abs*{f(x,y)} = \abs*{\frac{(x-1)^2x^2y^2}{(x^2+y^2)^{\frac{3}{2}}}} = $
+
+            $ \frac{(x-1)^2x^2y^2}{(x^2+y^2)^{\frac{3}{2}}} =  $
+
+            $ \frac{(x-1)^2x^2y^2}{(x^2+y^2)^{\frac{3}{2}}} \cdot \frac{(x^2+y^2)^{\frac{2}{3}}}{(x^2+y^2)^{\frac{2}{3}}} = $
+
+            $ \frac{(x-1)^2x^2y^2(x^2+y^2)^{\frac{2}{3}}}{x^2+y^2} = $
+
+            $ \frac{y^2}{x^2+y^2} \cdot (x-1)^2x^2(x^2+y^2)^{\frac{2}{3}} $
+
+            \qquad $ x^2 \geq 0 \Rightarrow x^2 + y^2 \geq y^2 \Rightarrow 1 \geq \frac{y^2}{x^2 + y^2} : \star $
+
+            $ \frac{y^2}{x^2+y^2} \cdot (x-1)^2x^2(x^2+y^2)^{\frac{2}{3}} \stackrel{\star}{\leq}$
+
+            $ 1 \cdot (x-1)^2x^2(x^2+y^2)^{\frac{2}{3}} =  $
+
+            $ (x-1)^2x^2(x^2+y^2)^{\frac{2}{3}} \stackrel{(x,y) \to (0,0)}{\to} 0 $
+
+            $ \Rightarrow g(x,y) = (x-1)^2x^2(x^2+y^2)^{\frac{2}{3}} $
+
+            $ 0 \leq \abs*{f(x,y)} \leq \abs*{g(x,y)} $
+
+            $ \Rightarrow \exists L \wedge L = 0 \qquad \square$
+
+        \item $ \lim_{(x,y) \to (0,0)} f(x,y) $
+        
+            $f(x,y)$
+        
+            \subsection*{Pruebo por curvas}
+
+            \begin{itemize}
+                \item iterado $ x = 0$
+
+                    $\lim_{y\to0} f(0,y)$
+
+                \item iterado $ y = 0$
+
+                    $\lim_{x\to0} f(x,0)$
+
+                \item rectas $ y = mx$
+                
+                    $\lim_{x\to0} f(x,mx)$
+
+                \item curvas $ y = x^2$
+
+                    $\lim_{x\to0} f(x,x^2)$
+
+            \end{itemize}
+
+            \subsection*{Intento demostrar por sandwich}
+        
+            $ \exists g(x,y): \lim{(x,y)\to(0,0)} g(x,y) = 0 \wedge 0 \leq \abs*{f(x,y)} \leq \abs*{g(x,y)} $
+        
+            \subsection*{Pruebo por definición}
+
+            $ \exists \epsilon,\delta(\epsilon) > 0 : \norm*{(x,y) - (0,0)} < \delta \Rightarrow \abs*{f(x,y)} < \epsilon $
+
+    \end{enumerate}
+
+\end{document} 

@@ -1,0 +1,114 @@
+\documentclass[../parcial.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item $ a = 1 \Rightarrow \lim_{(x,y) \to (0,0)} f(x,y) $
+
+        $ f(x,y) = \frac{xy}{x^2+y^2} $
+
+        \subsection*{Pruebo por curvas}
+
+        \begin{itemize}
+            \item iterado $x = 0$
+
+                $\lim_{y\to0} f(0,y) = \lim_{y\to0} \frac{0y}{y^2} = 0$
+
+            \item iterado $y = 0$
+
+                $\lim_{x\to0} f(x,0) = \lim_{x\to0} \frac{x0}{x^2} = 0$
+
+            \item rectas $y = mx$
+            
+                $\lim_{x\to0} f(x,mx) = \lim_{x\to0} \frac{m\cancel{x^2}}{\cancel{x^2}(1+m^2)} = \frac{m}{1+m^2} \wedge m \neq 0 \Rightarrow$
+
+                $\lim_{x\to0} f(x,mx) \neq 0$
+
+        \end{itemize}
+
+        $ \Rightarrow $ por rectas el limite da distinto que por los iterados $ \Rightarrow \nexists \lim_{(x,y) \to (0,0)} f(x,y)$
+
+        \item $ a = 2 \Rightarrow \lim_{(x,y) \to (0,0)} f(x,y) $
+        
+            $ f(x,y) = \frac{xy^2}{x^2+y^2} $
+        
+            \subsection*{Pruebo por curvas}
+
+            \begin{itemize}
+                \item iterado $ x = 0$
+
+                    $\lim_{y\to0} f(0,y) = \lim_{y\to0} \frac{0y^2}{y^2} = 0$
+
+                \item iterado $ y = 0$
+
+                    $\lim_{x\to0} f(x,0) = \lim_{x\to0} \frac{x0}{x^2} = 0$
+
+                \item rectas $ y = mx$
+                
+                    $\lim_{x\to0} f(x,mx) = \lim_{x\to0} \frac{x^3m^2}{x^2+(mx)^2} = $
+
+                    $ \lim_{x\to0} \frac{x^3m^2}{x^2(1+m^2)} = $
+
+                    $ \lim_{x\to0} \frac{x^{\cancel{3}}m^2}{\cancel{x^2}(1+m^2)} = 0 $
+
+            \end{itemize}
+
+            Estimo que $\lim_{(x,y) \to (0,0)} f(x,y) = 0$
+
+            \subsection*{Intento demostrar por sandwich}
+        
+            $ \exists g(x,y): \lim_{(x,y)\to(0,0)} g(x,y) = 0 \wedge 0 \leq \abs*{f(x,y)} \leq \abs*{g(x,y)} $
+
+            $ $
+
+            $ \abs*{\frac{xy^2}{x^2+y^2}} = $
+
+            $ \frac{\abs*{x}y^2}{x^2+y^2} = $
+
+            $ \abs*{x}\frac{y^2}{x^2+y^2} = $
+
+            $ \qquad x^2 \geq 0 \Rightarrow x^2 + y^2 \geq y^2 \Rightarrow 1 \geq \frac{y^2}{x^2+y^2} : \star $
+
+            $ \abs*{x}\frac{y^2}{x^2+y^2} \stackrel{\star}{\leq} $
+
+            $ \abs*{x} \cdot 1 \stackrel{(x,y)\to(0,0)}{\to} 0$
+
+            $ \Rightarrow g(x,y) = \abs*{x} $
+
+            $ \Rightarrow $ por sandwitch $f(x,y) \stackrel{(x,y)\to(0,0)}{\to} 0 \qquad \square$
+
+        \item $a > 2 \Rightarrow \lim_{(x,y) \to (0,0)} f(x,y)$
+
+            $ a = 2 + k : k > 0$
+
+            $ f(x,y) = \frac{xy^{2+k}}{x^2+y^2} $
+
+            Estimo que $\lim_{(x,y) \to (0,0)} f(x,y) = 0$
+
+            \subsection*{Intento demostrar por sandwich}
+        
+            $ \exists g(x,y): \lim_{(x,y)\to(0,0)} g(x,y) = 0 \wedge 0 \leq \abs*{f(x,y)} \leq \abs*{g(x,y)} $
+
+            $ $
+
+            $ \abs*{\frac{xy^{2+k}}{x^2+y^2}} = $
+
+            $ \frac{\abs*{x}\abs*{y^k}y^2}{x^2+y^2} = $
+
+            $ \abs*{x}\abs*{y^k}\frac{y^2}{x^2+y^2} = $
+
+            $ \qquad x^2 \geq 0 \Rightarrow x^2 + y^2 \geq y^2 \Rightarrow 1 \geq \frac{y^2}{x^2+y^2} : \star $
+
+            $ \abs*{x}\abs*{y^k}\frac{y^2}{x^2+y^2} \stackrel{\star}{\leq} $
+
+            $ \abs*{x}\abs*{y^k} \cdot 1 \stackrel{(x,y)\to(0,0)}{\to} 0\ \forall k$
+
+            $ \Rightarrow g(x,y) = \abs*{x}\abs*{y^k}$
+
+            $ \Rightarrow $ por sandwitch $f(x,y) \stackrel{(x,y)\to(0,0)}{\to} 0 \qquad \square$
+
+    \end{enumerate}
+
+    $ \Rightarrow \exists \lim_{(x,y)\to(0,0)} f(x,y) = \frac{xy^a}{x^2+y^2} \wedge \lim_{(x,y)\to(0,0)} f(x,y) = \frac{xy^a}{x^2+y^2} = 0\ \forall a \geq 2 \qquad\square$
+
+\end{document} 

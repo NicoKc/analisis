@@ -1,0 +1,106 @@
+    \documentclass[../parcial.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item 
+
+            $r: \real \to \real^3 $
+
+            $C: r(t) = (r_1(t), r_2(t), r_3(t)) = (x,y,z)$
+
+            $r_1: \real \to \real $
+
+            $r_2: \real \to \real $
+
+            $r_3: \real \to \real $
+
+            $\left\{
+                \begin{array}{ll}
+                    x^2 + z^2 = 4\\
+                    y = 3z^2
+                \end{array}
+            \right.$
+
+            \begin{itemize}
+                \item $x^2 + z^2 = 4$ es un circulo con centro en $(x,z) = (0,0)$  con radio $= \sqrt{4} = 2$
+                
+                    $\Rightarrow en polares es 2\cos(t) + 2\sin(t) = 1 $
+
+                    $\Rightarrow\left\{
+                        \begin{array}{ll}
+                            x = 2\cos(t)\\
+                            z = 2\sin(t)
+                        \end{array}
+                    \right. :\star$
+
+                \item $ y = 3z^2 \stackrel{\star}{\Rightarrow} y = 3(2\sin(t))^2 $
+            \end{itemize}
+
+            $\Rightarrow r(t) = \left\{
+                \begin{array}{ll}
+                    r_1(t) = 2\cos(t) \\
+                    r_2(t) = 3(2\sin(t))^2 \\
+                    r_3(t) = 2\sin(t)
+                \end{array}
+            \right. :\star$
+            
+            $\Rightarrow r(t) = (2\cos(t),3(2\sin(t))^2, 2\sin(t))$
+
+        \item QvQ $ \exists t_1,t_2 \in \real ; r(t_1) = (2,0,0) \wedge r(t_2)=(0,12,2) $
+        
+            \begin{itemize}
+                \item  $r(t_1) = (2,0,0) \Leftrightarrow \left\{
+                    \begin{array}{ll}
+                        2 = 2\cos(t_1) \\
+                        0 = 3(2\sin(t_1))^2 \\
+                        0 = 2\sin(t_1)
+                    \end{array}
+                    \right. \Leftrightarrow$
+                    
+                    $ 2 = 2\cos(t_1) \Leftrightarrow $
+                    
+                    $ 1 = \cos(t_1) \Leftrightarrow $
+                    
+                    $ t_1 = \frac{\pi}{2} $
+
+                \item $r(t_2) = (0,12,2) \Leftrightarrow \left\{
+                    \begin{array}{ll}
+                        0 = 2\cos(t_2) \\
+                        12 = 3(2\sin(t_2))^2 \\
+                        2 = 2\sin(t_2)
+                    \end{array}
+                    \right. \Leftrightarrow$
+                    
+                    $ 0 = 2\cos(t_2) \Leftrightarrow $
+                    
+                    $ 0 = \cos(t_2) \Leftrightarrow $
+                    
+                    $ t_2 = 0 $
+            \end{itemize}
+
+            $ $
+
+            \begin{itemize}
+                \item $t_1 = \frac{\pi}{2}$
+                \item $t_2 = 0$
+            \end{itemize}
+
+        \item 
+
+            \begin{itemize}
+                \item $\overrightarrow{v}=(-2,0,0)$
+                \item $\overrightarrow{u}=(0,-12,-2)$
+                \item $Area_p = \abs*{\overrightarrow{v} \crossproduct \overrightarrow{u}} = \abs*{\begin{vmatrix}
+                    i & j & k \\
+                    -2 & 0 & 0 \\
+                    0 & -12 & -2
+                \end{vmatrix}} = $
+
+                $\abs*{0i -4j + 24k} = \sqrt{16+576} = 24.33 $
+
+            \end{itemize}
+
+    \end{enumerate}
+
+\end{document}
