@@ -1,0 +1,350 @@
+\documentclass[../practica_05.tex]{subfiles}
+
+\begin{document}
+
+    \subsection*{Polinomio de taylor - $\mathbb{R}^2$}
+
+        $P_2(x,y)$ de $f=f(x,y)$ en $p = (a,b)$ con $f \in C^2$ en $D$ (disco centrado en p)
+
+        Hessiano de $f$ en $p$ : $H_f(p) = \begin{vmatrix}
+            f_{xx}(p)   & f_{xy}(p)  \\
+            f_{yx}(p)   & f_{yy}(p)  
+        \end{vmatrix}$
+
+        $\Rightarrow P_2(x,y) = f(p) + \grad f(p) \cdot (x-a, y-b) + \frac{1}{2} \begin{vmatrix}
+            x-a & y-b
+        \end{vmatrix} \cdot H_f(p) \cdot \begin{vmatrix}
+            x-a \\
+            y-b
+        \end{vmatrix} $
+
+    \subsection*{Polinomio de taylor - $\mathbb{R}^2$}
+
+        $P_2(x,y,z)$ de $f=f(x,y,z)$ en $p = (a,b,c)$ con $f \in C^2$ en $D$ (disco centrado en p)
+
+        Hessiano de $f$ en $p$ : $H_f(p) = \begin{vmatrix}
+            f_{xx}(p)   & f_{xy}(p) & f_{xz}(p) \\
+            f_{yx}(p)   & f_{yy}(p) & f_{yz}(p) \\
+            f_{zx}(p)   & f_{zy}(p) & f_{zz}(p) 
+        \end{vmatrix}$
+
+        $\Rightarrow P_2(x,y) = f(p) + \grad f(p) \cdot (x-a, y-b) + \frac{1}{2} \begin{vmatrix}
+            x-a & y-b & z-c
+        \end{vmatrix} \cdot H_f(p) \cdot \begin{vmatrix}
+            x-a \\
+            y-b \\
+            z-c
+        \end{vmatrix} $
+
+    \begin{enumerate}
+        \item 
+            \begin{itemize}
+                \item $f(x,y) = (x+y)^2$
+                \item $p = (0,0)$
+            \end{itemize}
+
+            $ $
+
+            \begin{itemize}
+                \item $f_{x}(x,y) = 2x + 2y$
+                \item $f_{y}(x,y) = 2x + 2y$
+                \item $f_{xx}(x,y) = 2 $
+                \item $f_{xy}(x,y) = 2 $
+                \item $f_{yx}(x,y) = 2 $
+                \item $f_{yy}(x,y) = 2 $
+            \end{itemize}
+
+            $ $
+
+            $ P_2(x,y) = \grad f(p)\cdot(x,y) + \frac{1}{2} \begin{vmatrix}
+                x & y
+            \end{vmatrix} H_f(p)  \begin{vmatrix}
+                y \\
+                x
+            \end{vmatrix} = $
+
+            $ \frac{1}{2} \begin{vmatrix}
+                x & y
+            \end{vmatrix} \begin{vmatrix}
+                2   & 2  \\
+                2   & 2
+            \end{vmatrix} \begin{vmatrix}
+                y \\
+                x
+            \end{vmatrix} = \frac{1}{2} \begin{vmatrix}
+                2x + 2y   & 2x + 2y  
+            \end{vmatrix} \begin{vmatrix}
+                y \\
+                x
+            \end{vmatrix} = \frac{1}{2}(2xy + 2y^2 + 2x^2 + 2yx) =$
+            
+            $ y^2 + x^2 + 2xy \Rightarrow $
+
+            $ P_1(x,y) = 0 $
+
+            $ P_1(x,y) = x^2 + y^2 + 2xy $
+
+        \item 
+            \begin{itemize}
+                \item $f(x,y) = e^{x+y}$
+                \item $p = (0,0)$
+            \end{itemize}
+
+            \begin{itemize}
+                \item $f_{x}(x,y) = e^{x+y}$
+                \item $f_{y}(x,y) = e^{x+y}$
+                \item $f_{xx}(x,y) = e^{x+y} $
+                \item $f_{xy}(x,y) = e^{x+y} $
+                \item $f_{yx}(x,y) = e^{x+y} $
+                \item $f_{yy}(x,y) = e^{x+y} $
+            \end{itemize}
+
+            $ P_2(x,y) = f(0,0) + \grad f(0,0)\cdot(x,y) + \frac{1}{2} \begin{vmatrix}
+                x & y
+            \end{vmatrix} H_f(0,0)  \begin{vmatrix}
+                y \\
+                x
+            \end{vmatrix} = $
+
+            $ 1 + (1,1)\cdot(x,y) + \frac{1}{2} \begin{vmatrix}
+                x & y
+            \end{vmatrix} \begin{vmatrix}
+                1   & 1  \\
+                1   & 1
+            \end{vmatrix} \begin{vmatrix}
+                y \\
+                x
+            \end{vmatrix} = $
+
+            $ 1 + x + y + \frac{1}{2} \begin{vmatrix}
+                x + y   & x + y
+            \end{vmatrix} \begin{vmatrix}
+                y \\
+                x
+            \end{vmatrix} =$
+
+            $ 1 + x + y + \frac{1}{2}(y(x+y) + x(x+y)) = $
+
+            $ 1 + x + y + \frac{1}{2}(yx+ y^2 + x^2 + yx) = $
+
+            $ 1 + x + y + \frac{1}{2}(2yx + y^2 + x^2) = $
+
+            $ 1 + x + y + yx + \frac{y^2}{2} + \frac{x^2}{2} \Rightarrow $
+
+            $ P_1(x,y) = 1 + x + y $
+
+            $ P_2(x,y) = 1 + x + y + xy + \frac{x^2}{2} + \frac{y^2}{2} $
+
+        \item 
+            \begin{itemize}
+                \item $f(x,y) = \frac{1}{x^2+y^2+1} = (x^2+y^2+1)^{-1} $
+                \item $p = (0,0)$
+            \end{itemize}
+
+            \begin{itemize}
+                \item $f_{x}(x,y) = \frac{-2}{(x^2+y^2+1)^2} $
+                \item $f_{y}(x,y) = \frac{-2}{(x^2+y^2+1)^2} $
+                \item $f_{xx}(x,y) = \frac{6x^2-2(y^2+1)}{(x^2+y^2+1)^3} $
+                \item $f_{xy}(x,y) = \frac{8xy}{(x^2+y^2+1)^3} $
+                \item $f_{yx}(x,y) = \frac{8xy}{(x^2+y^2+1)^3} $
+                \item $f_{yy}(x,y) = \frac{2(x^2-3y^2+1)}{(x^2+y^2+1)^3} $
+            \end{itemize}
+
+            \begin{itemize}
+                \item $f_{x}(0,0) = -2 $
+                \item $f_{y}(0,0) = -2 $
+                \item $f_{xx}(0,0) = -2 $
+                \item $f_{xy}(0,0) = 0 $
+                \item $f_{yx}(0,0) = 0 $
+                \item $f_{yy}(0,0) = 2 $
+            \end{itemize}
+
+            $P_2(x,y) = 1 - 2x - 2y + \frac{1}{2} (-2x^2 + 2x^2) = $
+
+            $ 1 - 2x - 2y -x^2 + x^2$
+
+            $P_1(x,y) = 1 - 2x - 2y$
+
+        \item 
+            \begin{itemize}
+                \item $f(x,y) = (x+xy+2y)$
+                \item $p = (1,1)$
+            \end{itemize}
+
+            \begin{itemize}
+                \item $f_{x}(x,y) = 1 + y $
+                \item $f_{y}(x,y) = x + 2 $
+                \item $f_{xx}(x,y) = 0 $
+                \item $f_{xy}(x,y) = 1 $
+                \item $f_{yx}(x,y) = 1 $
+                \item $f_{yy}(x,y) = 0 $
+            \end{itemize}
+
+            \begin{itemize}
+                \item $f_{x}(1,1) = 2 $
+                \item $f_{y}(1,1) = 3 $
+                \item $f_{xx}(1,1) = 0 $
+                \item $f_{xy}(1,1) = 1 $
+                \item $f_{yx}(1,1) = 1 $
+                \item $f_{yy}(1,1) = 0 $
+            \end{itemize}
+
+            $P_2(x,y) = f(1,1) \cdot \grad f(1,1)\cdot(x-1,y-1) + \frac{1}{2} \begin{vmatrix}
+                x-1 && y-1
+            \end{vmatrix} \cdot \begin{vmatrix}
+                0 & 1 \\
+                1 & 0
+            \end{vmatrix} \cdot \begin{vmatrix}
+                x-1 \\
+                y-1   
+            \end{vmatrix} = $
+
+            $ 4 + 2(x-1) + 3(y-1) + \frac{1}{2} \cdot \begin{vmatrix}
+                y-1 && x-1
+            \end{vmatrix} \cdot \begin{vmatrix}
+                x-1 \\
+                y-1
+            \end{vmatrix} = $
+
+            $ 4 + 2(x-1) + 3(y-1) + \frac{1}{2} \cdot (y-1)(x-1) + (x-1)(y-1) = $
+
+            $ 4 + 2(x-1) + 3(y-1) + \frac{1}{\cancel{2}} \cdot \cancel{2}(y-1)(x-1) = $
+
+            $ 4 + 2(x-1) + 3(y-1) + (y-1)(x-1) \Rightarrow$
+
+            $P_1(x,y) = 4 + 2(x-1) + 3(y-1)$
+
+            $P_2(x,y) = 4 + 2(x-1) + 3(y-1) + (x-1)(y-1)$
+
+        \item 
+            \begin{itemize}
+                \item $f(x,y) = e^{(x-1)^2}\cos(y)$
+                \item $p = (1,0)$
+            \end{itemize}
+
+            \begin{itemize}
+                \item $f_{x}(x,y) = 2e^{(x-1)^2}(x-1)\cos(y) $
+                \item $f_{y}(x,y) = -e^{(x-1)^2}\sin(y) $
+                \item $f_{xx}(x,y) = 2e^{(x-1)^2}(2x^2-4x+3)\cos(y) $
+                \item $f_{xy}(x,y) = -2e^{(x-1)^2}(x-1)\sin(y) $
+                \item $f_{yx}(x,y) = -2e^{(x-1)^2}(x-1)\sin(y) $
+                \item $f_{yy}(x,y) = -e^{(x-1)^2}\cos(y) $
+            \end{itemize}
+
+            \begin{itemize}
+                \item $f_{x}(1,0) = 0 $
+                \item $f_{y}(1,0) = 0 $
+                \item $f_{xx}(1,0) = 1 $
+                \item $f_{xy}(1,0) = 0 $
+                \item $f_{yx}(1,0) = 0 $
+                \item $f_{yy}(1,0) = -1 $
+            \end{itemize}
+
+            $\Rightarrow P_2(x,y) = 1 + \frac{x^2}{2} - \frac{y^2}{2}$
+
+            $\Rightarrow P_1(x,y) = 1 $
+
+
+        \item 
+            \begin{itemize}
+                \item $f(x,y) = e^x\sin(xy)$
+                \item $p = (2,\frac{\pi}{4})$
+            \end{itemize}
+
+            \begin{itemize}
+                \item $f_{x}(x,y) = e^x(\sin(xy)+\cos(xy)) $
+                \item $f_{y}(x,y) = e^x\cos(xy) $
+                \item $f_{xx}(x,y) = e^x(2y\cos(xy)-(y^2-1)\sin(xy)) $
+                \item $f_{xy}(x,y) = e^x((x+1)\cos(xy)-xy\sin(xy)) $
+                \item $f_{yx}(x,y) = e^x((x+1)\cos(xy)-xy\sin(xy)) $
+                \item $f_{yy}(x,y) = -e^x\sin(x,y) $
+            \end{itemize}
+
+            \begin{itemize}
+                \item $f(2,\frac{\pi}{4}) = e^2 $
+                \item $f_{x}(2,\frac{\pi}{4}) = e^2 $
+                \item $f_{y}(2,\frac{\pi}{4}) = 0 $
+                \item $f_{xx}(2,\frac{\pi}{4}) = 1 $
+                \item $f_{xy}(2,\frac{\pi}{4}) = -e^2\frac{\pi}{2} $
+                \item $f_{yx}(2,\frac{\pi}{4}) = -e^2\frac{\pi}{2} $
+                \item $f_{yy}(2,\frac{\pi}{4}) = -e^2 $
+            \end{itemize}
+
+            $P_1(x,y) = e^2 + e^2(x-2)$
+
+            $P_2(x,y) = e^2 + e^2(x-2) + \frac{(x-2)^2}{2} - \frac{e^2(y-\frac{\pi}{4})^2}{2} - e^2\frac{\pi}{2}(x-2)(y-\frac{\pi}{4}) $
+
+        \item 
+            \begin{itemize}
+                \item $f(x,y) = ln(1+xy)$
+                \item $p = (2,3)$
+            \end{itemize}
+
+            \begin{itemize}
+                \item $f_{x}(x,y) = \frac{y}{1+xy}$
+                \item $f_{y}(x,y) = \frac{x}{1+xy} $
+                \item $f_{xx}(x,y) = \frac{y^2}{(1+xy)^2} $
+                \item $f_{xy}(x,y) = \frac{1}{(1+xy)^2} $
+                \item $f_{yx}(x,y) = \frac{1}{(1+xy)^2} $
+                \item $f_{yy}(x,y) = \frac{x^2}{(1+xy)^2} $
+            \end{itemize}
+
+            \begin{itemize}
+                \item $f(2,3) = \ln(7) $
+                \item $f_{x}(2,3) = \frac{2}{7} $
+                \item $f_{y}(2,3) = \frac{3}{7} $
+                \item $f_{xx}(2,3) = -\frac{9}{49} $
+                \item $f_{xy}(2,3) = \frac{1}{49} $
+                \item $f_{yx}(2,3) = \frac{1}{49} $
+                \item $f_{yy}(2,3) = -\frac{4}{49} $
+            \end{itemize}
+
+            $P_1(x,y) = \ln(7) + \frac{2(x-2)}{7} + \frac{3(y-2)}{7}$
+
+            $P_2(x,y) = \ln(7) + \frac{2(x-2)}{7} + \frac{3(y-2)}{7} - \frac{9(x-2)^2}{2\cdot49} - \frac{4(y-3)^2}{2\cdot49} + \frac{(x-2)(y-3)}{49}$
+
+        \item 
+            \begin{itemize}
+                \item $f(x,y) = x + \sqrt{y} + \sqrt[3]{z}$
+                \item $p = (2,3,4)$
+            \end{itemize}
+
+            \begin{itemize}
+                \item $f_{x}(x,y,z) = 1$
+                \item $f_{y}(x,y,z) = \frac{1}{2\sqrt{y}} $
+                \item $f_{z}(x,y,z) = \frac{1}{3z^{\frac{2}{3}}} $
+                \item $f_{xx}(x,y,z) = 0 $
+                \item $f_{xy}(x,y,z) = 0 $
+                \item $f_{xz}(x,y,z) = 0 $
+                \item $f_{yx}(x,y,z) = 0 $
+                \item $f_{yy}(x,y,z) = -\frac{1}{4y^{\frac{3}{2}}} $
+                \item $f_{yz}(x,y,z) = 0 $
+                \item $f_{zx}(x,y,z) = 0 $
+                \item $f_{zy}(x,y,z) = 0 $
+                \item $f_{zz}(x,y,z) = -\frac{2}{9z^{\frac{5}{3}}} $
+            \end{itemize}
+
+            \begin{itemize}
+                \item $f(2,3,4) = 2 + \sqrt{3} + \sqrt[3]{4}$
+                \item $f_{x}(2,3,4) = 1$
+                \item $f_{y}(2,3,4) = \frac{1}{2\sqrt{3}} $
+                \item $f_{z}(2,3,4) = \frac{1}{3\cdot 4^{\frac{2}{3}}} $
+                \item $f_{xx}(2,3,4) = 0 $
+                \item $f_{xy}(2,3,4) = 0 $
+                \item $f_{xz}(2,3,4) = 0 $
+                \item $f_{yx}(2,3,4) = 0 $
+                \item $f_{yy}(2,3,4) = -\frac{1}{4\cdot 3^{\frac{3}{2}}} $
+                \item $f_{yz}(2,3,4) = 0 $
+                \item $f_{zx}(2,3,4) = 0 $
+                \item $f_{zy}(2,3,4) = 0 $
+                \item $f_{zz}(2,3,4) = -\frac{2}{9\cdot 4^{\frac{5}{3}}} $
+            \end{itemize}
+
+            $P_1(x,y,z) = 2 + \sqrt{3} + \sqrt[3]{4} + (x-2) + \frac{1}{2\sqrt{3}}(y-3) + \frac{1}{3\cdot 4^{\frac{2}{3}}}(z-4) $
+
+            $P_2(x,y,z) = 2 + \sqrt{3} + \sqrt[3]{4} + (x-2) + \frac{1}{2\sqrt{3}}(y-3) + \frac{1}{3\cdot 4^{\frac{2}{3}}}(z-4) $
+            $ -\frac{(y-3)^2}{2\cdot 4\cdot 3^{\frac{3}{2}}} - \frac{2\cdot (z-4)^2}{2 \cdot 9\cdot 4^{\frac{5}{3}}}$
+
+    \end{enumerate}
+
+\end{document}

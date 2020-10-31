@@ -1,0 +1,172 @@
+\documentclass[../practica_05.tex]{subfiles}
+
+\begin{document}
+
+    \section*{Polinomio de Taylor}
+
+        $k \geq 1 \in \mathbb{Z} \wedge f: \mathbb{R} \to \mathbb{R} $ diferenciable $ k $ veces en el punto $a \in \mathbb{R}$
+
+        $\Rightarrow h_k: \mathbb{R} \to \mathbb{R}\ tq$
+
+        \begin{itemize}
+            \item $f(x) = f(a) + f^\prime(a)(x-a) + \frac{f^{\prime\prime}(a)}{2!} (x-a)^2 + ... + \frac{f^{(k)}(a)}{k!} + h_k(x)(x-a)^k $
+            \item $lim_{x \to a} h_k(x) = 0$
+        \end{itemize}
+
+    \begin{enumerate}
+        \item
+            \begin{itemize}
+                \item $f(x) = \frac{1}{1-x}$
+                \item orden 5
+                \item $x_0 = 0$
+            \end{itemize}
+
+            $ $
+
+            \begin{itemize}
+                \item $f(x) = (1-x)^{-1}$
+                \item $f^\prime(x) = -1(1-x)^{-2}$
+                \item $f^{\prime\prime}(x) = 2(1-x)^{-3}$
+                \item $f^{(3)}(x) = -6(1-x)^{-4}$
+                \item $f^{(4)}(x) = 24(1-x)^{-5}$
+                \item $f^{(5)}(x) = -120(1-x)^{-6}$
+            \end{itemize}
+
+            $\Rightarrow P_5(x) = 1 - 1x + \frac{2x^2}{2!} - \frac{6x^3}{3!} + \frac{24x^4}{4!} - \frac{120x^5}{5!} $
+
+        \item
+            \begin{itemize}
+                \item $f(x) = \sin(x)$
+                \item orden 4
+                \item $x_0 = 0$
+            \end{itemize}
+
+            $ $
+
+            \begin{itemize}
+                \item $f(x) = \sin(x)$
+                \item $f^\prime(x) = \cos(x)$
+                \item $f^{\prime\prime}(x) = -\sin(x)$
+                \item $f^{(3)}(x) = -\cos(x)$
+                \item $f^{(4)}(x) = \sin(x)$
+            \end{itemize}
+
+            $\Rightarrow P_4(x) = x - \frac{x^3}{3!}$
+        \item
+            \begin{itemize}
+                \item $f(x) = \sin(x)$
+                \item orden 5
+                \item $x_0 = 0$
+            \end{itemize}
+
+            $ $
+
+            \begin{itemize}
+                \item $f(x) = \sin(x) \Rightarrow f(0) = 0$
+                \item $f^\prime(x) = \cos(x) \Rightarrow f^\prime(0) = 1$
+                \item $f^{\prime\prime}(x) = -\sin(x) \Rightarrow f^{\prime\prime}(0) = 0$
+                \item $f^{(3)}(x) = -\cos(x) \Rightarrow f^{(3)}(0) = -1$
+                \item $f^{(4)}(x) = \sin(x) \Rightarrow f^{(4)}(0) = 0$
+                \item $f^{(5)}(x) = \cos(x) \Rightarrow f^{(5)}(0) = 1$
+            \end{itemize}
+
+            $\Rightarrow P_5(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!}$
+
+        \item
+            \begin{itemize}
+                \item $f(x) = \cos(x)$
+                \item orden 5
+                \item $x_0 = 0$
+            \end{itemize}
+
+            $ $
+
+            \begin{itemize}
+                \item $f(x) = \cos(x) \Rightarrow f(0) = 1$
+                \item $f^\prime(x) = -\sin(x) \Rightarrow f^\prime(0) = 0$
+                \item $f^{\prime\prime}(x) = -\cos(x) \Rightarrow f^{\prime\prime}(0) = -1$
+                \item $f^{(3)}(x) = \sin(x) \Rightarrow f^{(3)}(0) = 0$
+                \item $f^{(4)}(x) = \cos(x) \Rightarrow f^{(4)}(0) = 1$
+                \item $f^{(5)}(x) = -\sin(x) \Rightarrow f^{(5)}(0) = 0$
+            \end{itemize}
+
+            $\Rightarrow P_5(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} $
+
+            $ $
+
+        \item
+            \begin{itemize}
+                \item $f(x) = \ln(x)$
+                \item orden 4
+                \item $x_0 = 1$
+            \end{itemize}
+
+            \begin{itemize}
+                \item $f(x) = \ln(x) \Rightarrow f(1) = 0$
+                \item $f^\prime(x) = x^{-1} \Rightarrow f^\prime(1) = 1$
+                \item $f^{\prime\prime}(x) = -x^{-2} \Rightarrow f^{\prime\prime}(1) = -1$
+                \item $f^{(3)}(x) = 2x^{-3} \Rightarrow f^{(3)}(1) = 2$
+                \item $f^{(4)}(x) = -6x^{-4} \Rightarrow f^{(4)}(1) = 6$
+            \end{itemize}
+
+            $\Rightarrow P_4(x) = 0 + (x-1) - \frac{(x-1)^2}{2!} + 2\frac{(x-1)^3}{3!} - 6\frac{(x-1)^4}{4!}$
+
+        \item
+            \begin{itemize}
+                \item $f(x) = \sqrt{x}$
+                \item orden 3
+                \item $x_0 = 4$
+            \end{itemize}
+
+            \begin{itemize}
+                \item $f(x) = \sqrt{x} \Rightarrow f(4) = 2$
+                \item $f^\prime(x) = \frac{1}{2\sqrt{x}} \Rightarrow f^\prime(4) = \frac{1}{2}$
+                \item $f^{\prime\prime}(x) = -\frac{1}{4x^{\frac{3}{2}}} \Rightarrow f^{\prime\prime}(4) = -\frac{1}{4(4^{\frac{3}{2}})}$
+                \item $f^{(3)}(x) = \frac{3}{8x^{\frac{5}{2}}} \Rightarrow f^{(3)}(4) = \frac{3}{8(4^{\frac{5}{2}})}$
+            \end{itemize}
+
+            $ $
+
+            $\Rightarrow P_3(x) = 2 + \frac{1}{2}(x-4) - \frac{1}{4(4^{\frac{3}{2}})}\frac{(x-1)^2}{2!} + \frac{3}{8(4^{\frac{5}{2}})}\frac{(x-1)^3}{3!}$
+
+        \item
+            \begin{itemize}
+                \item $f(x) = e^x$
+                \item orden 5
+                \item $x_0 = 0$
+            \end{itemize}
+
+            \begin{itemize}
+                \item $f(x) = e^x \Rightarrow f(0) = 1$
+                \item $f^\prime(x) = e^x \Rightarrow f^\prime(0) = 1$
+                \item $f^{\prime\prime}(x) = e^x \Rightarrow f^{\prime\prime}(0) = 1$
+                \item $f^{(4)}(x) = e^x \Rightarrow f^{(3)}(0) = 1$
+                \item $f^{(5)}(x) = e^x \Rightarrow f^{(3)}(0) = 1$
+            \end{itemize}
+
+            $\Rightarrow P_3(x) = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \frac{x^5}{5!}$
+
+        \item
+            \begin{itemize}
+                \item $f(x) = (1+x)^6$
+                \item orden 6
+                \item $x_0 = 0$
+            \end{itemize}
+
+            \begin{itemize}
+                \item $f(x) = (1+x)^6 \Rightarrow f(0) = 1$
+                \item $f^\prime(x) = 6(1+x)^5 \Rightarrow f^\prime(0) = 6$
+                \item $f^{\prime\prime}(x) = 30(1+x)^4 \Rightarrow f^{\prime\prime}(0) = 30$
+                \item $f^{(3)}(x) = 120(1+x)^3 \Rightarrow f^{(3)}(0) = 120$
+                \item $f^{(4)}(x) = 360(1+x)^2 \Rightarrow f^{(3)}(0) = 360$
+                \item $f^{(5)}(x) = 720(1+x) \Rightarrow f^{(3)}(0) = 720$
+                \item $f^{(6)}(x) = 720 \Rightarrow f^{(3)}(0) = 720$
+            \end{itemize}
+
+            $\Rightarrow P_6(x) = 1 + 6x + 30\frac{x^2}{2!} + 120\frac{x^3}{3!} + 360\frac{x^4}{4!} + 720\frac{x^5}{5!} + 720\frac{x^6}{6!} = $
+
+            $1 + 6x + 15x^2 + 20x^3 + 15x^4 + 6x^5 + x^6$
+
+    \end{enumerate}
+
+\end{document}

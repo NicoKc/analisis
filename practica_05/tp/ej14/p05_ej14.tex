@@ -1,0 +1,17 @@
+\documentclass[../practica_05.tex]{subfiles}
+
+\begin{document}
+
+    $ P_2(x,y) = 1 - x^2 - y^2 + R_2(x,y) $
+
+    $\lim_{(x,y) \to (0,0)} \frac{f(x,y)+x^2+y^2-1}{x^2 + y^2} \equiv$
+
+    $\lim_{(x,y) \to (0,0)} \frac{P_2(x,y)+x^2+y^2-1}{x^2 + y^2} \equiv$
+
+    $\lim_{(x,y) \to (0,0)} \frac{\cancel{1 - x^2 - y^2} + R_2(x,y)\cancel{+x^2+y^2-1}}{x^2 + y^2} \equiv$
+
+    $\lim_{(x,y) \to (0,0)} \frac{R_2(x,y)}{x^2 + y^2} \equiv$
+
+    $\lim_{(x,y) \to (0,0)} \frac{R_2(x,y)}{\norm*{(x,y)}^2} = 0$
+
+\end{document}

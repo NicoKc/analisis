@@ -1,0 +1,40 @@
+\documentclass[../practica_05.tex]{subfiles}
+
+\begin{document}
+
+    \begin{itemize}
+        \item $f: \mathbb{R}^2 \to \mathbb{R}^2$
+        \item $f(x,y) = (x+1,2y-e^x)$
+        \item $g: \mathbb{R}^2 \to \mathbb{R} \in C^1$
+        \item $P_2(x,y) de g \circ f $ en $(0,0)$
+        \item $P_2(x,y) = 4 + 3x - 2y - x^2 + 5xy$
+        \item $\grad g(1,-1)$
+    \end{itemize}
+
+    $ h = g \circ f = g(f(x,y)) = g(x+1,2y-e^x) $
+
+    $ h(0,0) = g(f(0,0)) \stackrel{f(0,0 = (1,-1))}{=} g(1,-1) $
+
+    \begin{itemize}
+        \item $ h_x(0,0) = P_{2x}(0,0) $
+        
+            $ P_{2x}(x,y) = 3 - 2x + 5y \Rightarrow$
+            $ P_{2x}(0,0) = 3 $
+
+        \item $ h_y(0,0) = P_{2y}(0,0) $
+
+            $ P_{2y}(x,y) = -2 + 5y \Rightarrow$
+            $ P_{2y}(0,0) = -2 $
+    \end{itemize}
+
+    $ h_x(0,0) = g_x(1,-1)\cdot 1 + g_y(1,-1) \cdot (- 1) $
+
+    $ h_y(0,0) = g_x(1,-1)\cdot 0 + g_y(1,-1) \cdot 2 $
+
+    $ h_y(0,0) = -2 = 2g_y(1,-1) \Rightarrow g_y(1,-1) = -1 $
+
+    $ h_x(0,0) = 3 = g_x(1,-1) + 1 \Rightarrow g_x(1,-1) = 2 $
+
+    $\Rightarrow \grad g(1,-1) = (-1,2)$
+
+\end{document}

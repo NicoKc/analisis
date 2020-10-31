@@ -1,0 +1,43 @@
+\documentclass[../practica_05.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item 
+
+            $ f(x) = \cos(x) \wedge p_4(x) = 1 - \frac{x^2}{2} + \frac{x^4}{4!} $
+
+            $ f(x) - p_4(x) = E_4(x) = -\sin(c)\frac{x^4}{5!}$
+
+            $ \abs*{-\sin(c)\frac{x^4}{5!}} \leq 5\cdot10^{-5} $
+
+            $ \abs*{-\sin(c)\frac{x^4}{5!}} \leq $
+
+            $ \abs*{\sin(c)}\frac{x^4}{5!} \stackrel{\abs*{\sin(x)}\leq x}{\leq} $
+
+            $ \abs*{c}\frac{x^4}{5!} \stackrel{\abs*{c} \leq \abs*{x - x_0}}{\leq} $
+
+            $ \abs*{x}\frac{x^4}{5!} = $
+
+            $ \frac{\abs*{x}^5}{5!} \leq 5 \cdot 10^{-5} \Leftrightarrow$
+
+            $ \abs*{x}\leq \sqrt[5]{5! \cdot 5 \cdot 10^{-5}}$
+
+        \item
+
+            $ f(x) = \sin(x) \wedge p_1(x) = x $
+
+            $ f(x) - p_2(x) = E_1(x) = \frac{-\sin(c)}{2}x^2 $
+
+            $ \frac{\abs*{\sin(c)}}{2} \leq \frac{\abs*{c}x^2}{2} \leq $
+
+            $ \frac{\abs*{x}x^2}{2} \leq  $
+
+            $ \frac{\abs*{x}^3}{2} \leq 10^{-3} \Leftrightarrow$
+
+            $ \abs*{x} \leq \sqrt[3]{2\cdot10^{-3}}$
+
+
+    \end{enumerate}
+
+\end{document}

@@ -1,3 +1,6 @@
+#from tpBuilder import *
+#build('/home/nico/Proyectos/analisis',5,15)
+
 import os
 
 texFileTemplate = """\\documentclass[../practica_{:02d}.tex]{{subfiles}}
@@ -35,7 +38,10 @@ prTexFileTemplate = """\\documentclass{{book}}
 """
 
 def build(path, tpNumber, quantity):
-    tpFolder = os.path.join(path, 'tp')
+    practicaPath = os.path.join(path, 'practica_{:02d}'.format(tpNumber))
+    if not os.path.exists(practicaPath):
+        os.mkdir(practicaPath)
+    tpFolder = os.path.join(practicaPath, 'tp')
     os.mkdir(tpFolder)
     prTexName = 'practica_{:02d}.tex'.format(tpNumber)
     texFile = open(os.path.join(tpFolder,prTexName), 'w')
