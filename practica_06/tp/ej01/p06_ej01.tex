@@ -2,6 +2,78 @@
 
 \begin{document}
 
-    $ $
+    \subsection*{Puntos criticos}
+
+        $(a,b)$ es un punto critico $\Leftrightarrow f_x(a,b) = (f_y(a,b) = 0) \vee \nexists f_x(a,b) \vee \nexists f_y(a,b)$ 
+
+    \subsection*{Punto silla}
+
+        $(a,b)$ es un punto silla de f $\Leftrightarrow (a,b)$ es un punto critico $\wedge$ no es máximo local de f y no es mínimo local de f
+
+    \subsection*{Teorema Criterio del Hessiano}
+
+        $f \in C^2 \wedge (a,b)$ punto critico de $f$
+
+        $H_f(a,b) = \begin{vmatrix}
+            f_{xx}(a,b) & f_{xy}(a,b) \\
+            f_{yx}(a,b) & f_{yy}(a,b)
+        \end{vmatrix} \Rightarrow$
+
+        \begin{enumerate}
+            \item si $f_{xx}(a,b) > 0 \wedge \determinant(H_f(ab))>0 \Rightarrow (a,b)$ es un mínimo local estricto $ de f$
+            \item si $f_{xx}(a,b) < 0 \wedge \determinant(H_f(ab))>0 \Rightarrow (a,b)$ es un máximo local estricto $ de f$
+            \item si $\determinant(H_f(ab))<0 \Rightarrow (a,b)$ es un punto silla $ de f$
+        \end{enumerate}
+
+    \begin{enumerate}
+        \item $f(x,y) = 4 + x^3 + y^3 - 3xy$
+
+            \begin{itemize}
+                \item $f_x(x,y) = 2x^2 - 3y$
+                \item $f_y(x,y) = 2y^2 - 3x$
+            \end{itemize}
+
+            Ptos criticos \begin{enumerate}
+                \item $(0,0)$
+                    
+                    $ H_f(0,0) = \begin{vmatrix}
+                        0 & -3\\
+                        -3 & 0
+                    \end{vmatrix} $
+
+                    $det(H_f(0,0)) = 0 - (-3 \cdot -3) = -9$
+
+                    Por el teorema del criterio del Hessiano $(0,0)$ es un punto silla
+
+            \end{enumerate}
+
+        \item $f(x,y) = 3x - x^3 - 2y^2 + y^4$
+        
+            \begin{itemize}
+                \item $f_x(x,y) = 3 - 3x^2$
+                
+                    $ = 0 \Leftrightarrow x = 1$
+
+                \item $f_y(x,y) = -4y + 4y^3$
+
+                    $ = 0 \Leftrightarrow 4y(1 + y^2) = 0 \Leftrightarrow y = 0$
+
+            \end{itemize}
+
+            Ptos criticos \begin{itemize}
+                \item $(0,0)$
+
+                    $ H_f(0,0) = \begin{vmatrix}
+                        3 & 0 \\
+                        0 & -4
+                    \end{vmatrix} \Rightarrow$
+
+                    $ det(H_f(0,0)) = -12 $
+
+                    Por el criterio $(0,0)$ es un punto silla
+
+            \end{itemize}
+
+    \end{enumerate}
 
 \end{document}

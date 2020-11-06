@@ -2,6 +2,179 @@
 
 \begin{document}
 
-    $ $
+    \begin{enumerate}
+        \item $f(x,y) = x^2 + xy + y^2 + y$
+        
+            \begin{itemize}
+                \item $f_x(x,y) = 2x + y $
+
+                    $= 0 \Leftrightarrow y = -2x$
+
+                \item $f_y(x,y) = x + 2y + 1 $
+
+                    $= 0 \Leftrightarrow x = -2y -1$
+
+            \end{itemize}
+
+            $\Leftrightarrow x = \frac{1}{3} \wedge y = -\frac{2}{3}$
+
+            $H_f(\frac{1}{3}, -\frac{2}{3}) = \begin{vmatrix}
+                2 & 1 \\
+                1 & 2
+            \end{vmatrix} \Rightarrow det(H_f(\frac{1}{3}, -\frac{2}{3})) = 2$
+
+            $(\frac{1}{3}, -\frac{2}{3})$ es mínimo local de f
+
+        \item $f(x,y) = (x-y)(1-xy) = x - yx^2 - y + xy^2$
+        
+            \begin{itemize}
+                \item $f_x(x,y) = 1 - 2xy + y^2 $
+                
+                    $ = 0 \Leftrightarrow 0 = 1 + y(-2x + y) $
+
+                    $\Leftrightarrow -1 = y(-2x + y) \Leftrightarrow (x,y) \in \{(1,1),(-1,-1)\}$
+
+                \item $f_y(x,y) = -1 - x^2 + 2xy $
+                
+                    $ = 0 \Leftrightarrow 0 = -1 + x(-x + 2y)$
+
+            \end{itemize}
+
+            $H_f(x,y) = \begin{vmatrix}
+                -2y & -2x + 2y \\
+                -2x + 2y & 2x
+            \end{vmatrix}$
+        
+            Ptos criticos \begin{itemize}
+                \item $(-1,-1)$
+                
+                    $H_f(-1,-1) = -4 \Rightarrow$ es punto silla 
+                    
+                \item $(1,1)$
+
+                    $H_f(1,1) = -4 \Rightarrow$ es punto silla 
+            \end{itemize}
+
+        \item $f(x,y) = y^3 + 3x^2y - 6x^2 - 6y^2 + 2$
+        
+            \begin{itemize}
+                \item $f_x(x,y) = 6xy - 12x$
+                
+                    $ 6x(y-2) = 0 \Leftrightarrow x = 0 \vee y = 2$
+
+                \item $f_y(x,y) = 3y^2 + 3x^2 - 12y$
+
+                    $(-2,2),(2,2),(0,0),(0,4)$
+
+            \end{itemize}
+
+            $H_f(x,y) = \begin{vmatrix}
+                6y - 12 & 6x \\
+                6x & 6y - 12
+            \end{vmatrix}$
+
+            Ptos criticos\begin{itemize}
+                \item $(0,0)$
+                
+                    $H_f(0,0) = -24$ pto silla
+
+                \item $(0,2)$
+                
+                    $H_f(0,2) = 0 - 0$ maximo 
+
+                \item $(2,2)$
+                
+                    $H_f(2,2) = 0 - 12^2$ pto silla
+
+                \item $(-2,2)$
+                
+                    $H_f(-2,2) = 24^2 - 12^2$ maximo
+
+                \item $(0,4)$
+                
+
+                    $H_f(0,4) = (4\cdot 12)^2 - 0 $ minimo
+
+            \end{itemize}
+
+        \item $f(x,y) = xy + \frac{1}{x} + \frac{1}{y}$
+        
+            \begin{itemize}
+                \item $f_x(x,y) = y + \frac{-1}{x^2}$
+                \item $f_y(x,y) = x + \frac{-1}{y^2}$
+            \end{itemize}
+
+            $H_f(x,y) = \begin{vmatrix}
+                \frac{2}{x^3} & 1 \\
+                1 & \frac{2}{y^3}
+            \end{vmatrix}$
+
+            Ptos criticos\begin{itemize}
+                \item $(1,-1)$
+                
+                    $H_f(1,-1) = -4 - 1$ pto silla
+
+                \item $(1,1)$
+                
+                    $H_f(1,1) = 4 - 1$ minimo
+                    
+                \item $(-1,1)$
+                
+                    $H_f(-1,1) = -4 - 1$ pto silla
+                \end{itemize}
+ 
+        \item $f(x,y) = y\cos(x)$
+        
+            \begin{itemize}
+                \item $f_x(x,y) = -y\sin(x)$
+                \item $f_y(x,y) = \cos(x)$
+            \end{itemize}
+
+            $H_f(x,y) = \begin{vmatrix}
+                -y\cos(x) && \sin(x)
+                -\sin(x) && 1
+            \end{vmatrix}$
+
+            Ptos criticos \begin{itemize}
+                \item $(0,0)$
+                
+                    $H_f(0,0) = 0 - 0$ pto silla
+
+                \item $(\frac{\pi}{2},0)$
+                
+                    $H_f(\frac{\pi}{2},0) = 0 + 1$ pto silla
+
+            \end{itemize}
+
+        \item $f(x,y) = e^y(y^2-x^2) = e^yy^2 - e^yx^2$
+        
+            \begin{itemize}
+                \item $f_x(x,y) = -2xe^y$
+                
+                    $x = 0$
+
+                \item $f_y(x,y) = e^y(y^2 + 2y) - e^yx^2$
+                
+                    $ y = 0 \vee y = -2 $
+
+            \end{itemize}
+
+            $H_f(x,y) = \begin{vmatrix}
+                -2e^y && -2xe^y\\
+                -2xe^y &&  e^y(-x^2 + y^2 + 4y + 2)
+            \end{vmatrix}$
+
+            ptos criticos \begin{itemize}
+                \item $(0,0)$
+                
+                    $H_f(0,0) = -2(2) - 0 $ pto silla 
+                
+                \item $(0,-2)$
+                
+                    $H_f(0,0) = -4e^{-2} $ pto silla
+
+            \end{itemize}
+
+    \end{enumerate}
 
 \end{document}

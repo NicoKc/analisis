@@ -2,6 +2,58 @@
 
 \begin{document}
 
-    $ $
+    \begin{enumerate}
+        \item $f(x,y) = x^2 + y^2 + x^{-2}y^{-2}$
+
+            \begin{itemize}
+                \item $f_x(x,y) = 2x + -2x^{-3}y^{-2}$
+                \item $f_x(x,y) = 2y + -2x^{-2}y^{-3}$
+            \end{itemize}
+
+            $H_f(x,y) = \begin{vmatrix}
+                2 + 6x^{-4}y^{-2} & 4x^{-3}y^{-3} \\
+                4x^{-3}y^{-3} & 2 + 6x^{-2}y^{-4}
+            \end{vmatrix}$
+
+            \begin{itemize}
+                \item $(1,1)$
+                
+                    $H_f(1,1) = 16 - 16 = 0  $
+                    
+                \item $(1,-1)$
+
+                    $H_f(1,-1) = 8 - 16 = -8 $
+
+                \item $(-1,-1)$
+
+                    $H_f(-1,-1) = 16 - 16 = 0 $
+
+                \item $(-1,1)$
+
+                    $H_f(-1,1) = 8 - 16 = -8 $
+
+            \end{itemize}
+
+        \item $f(x,y) = xye^{-x^2-y^2}$
+        
+            \begin{itemize}
+                \item $f_x(x,y) = e^{-x^2-y^2}(y - 2x^2y)$
+                \item $f_x(x,y) = e^{-x^2-y^2}(x + -2xy^2)$
+            \end{itemize}
+
+            $H_f(x,y) = \begin{vmatrix}
+                ye^{-x^2-y^2}2x(2x^2-3) & (2x^2-1)(2y^2-1)e^{-x^2-y^2} \\
+                (2x^2-1)(2y^2-1)e^{-x^2-y^2} & 2xy(2y^2-3)e^{-x^2-y^2}
+            \end{vmatrix}$
+
+            Ptos criticos \begin{itemize}
+                \item $(0,0)$ pto silla
+                \item $(1,1)$ minimo
+                \item $(1,-1)$ maximo
+                \item $(-1,1)$ minimo
+                \item $(-1,-1)$ maximo
+            \end{itemize}
+
+    \end{enumerate}
 
 \end{document}
