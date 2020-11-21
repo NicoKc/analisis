@@ -1,0 +1,58 @@
+\documentclass[../practica_08.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item $ \int_0^2 \int_0^{z^2} \int_0^{y-z} (2x-y) dxdydz $
+        
+            \begin{itemize}
+                \item $ \int_0^{y-z} 2x-y dx =$
+                
+                    $\left. x^2 - xy \right |_0^{y-z} = $
+
+                    $ (y-z)^2 - y^2 - yz = $
+
+                    $ \cancel{y^2} -2yz + ẓ^2 \cancel{- y^2} - yz = $
+
+                    $ -3yz + z^2 $
+
+                \item  $ \int_0^{z^2} -3yz + z^2 dy = $
+                
+                    $ \left. \frac{-3zy^2}{2} + yz^2 \right |_0^{z^2} =$
+
+                    $ \frac{-3z^5}{2} + z^4 $
+
+                \item $ \int_0^2 \frac{-3z^5}{2} + z^4 dz = $
+                
+                    $ \left.  \frac{-3z^6}{12} + \frac{z^5}{5} \right |_0^2 =$
+
+                    $ -16 + \frac{48}{5} $
+
+            \end{itemize}
+
+        \item $ \int_1^2 \int_0^{2z} \int_0^{\ln(x)} xe^{-y} dydxdz $
+        
+            \begin{itemize}
+                \item $\int_0^{\ln(x)} xe^{-y} dy = $
+                
+                    $ \left. xe^{-y} dy \right |_0^{\ln(x)} = $
+
+                    $ x^2 - x $
+
+                \item $\int_0^{2z} x^2 - x dx = $
+                
+                    $\left. \frac{x^3}{3} - \frac{x^2}{2} \right |_0^{2z} = $
+
+                    $ \frac{8z^3}{3} - \frac{4z^2}{2} $
+
+                \item $\int_1^2 \frac{8z^3}{3} - \frac{4z^2}{2} dz = $
+                
+                    $ \left. \frac{8z^4}{12} - \frac{4z^3}{6} \right |_1^2  = $
+
+                    $ \frac{8 \cdot 16}{12} - \frac{4 \cdot 8}{6} $
+
+            \end{itemize}
+
+    \end{enumerate}
+
+\end{document}

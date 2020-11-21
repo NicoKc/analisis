@@ -1,0 +1,64 @@
+\documentclass[../practica_08.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item $\int \int_D y^2dA, D= \{(x,y) \in \mathbb{R}^2: -1 \leq y \leq 1, -y-2\leq x \leq y \} $
+        
+            D es una region tipo 2 y por fubini
+
+            $\int_{-1}^1 (\int_{-y-2}^y y^2 dx ) dy$
+
+            \begin{itemize}
+                \item $ \int_{-y-2}^y y^2 dx = $
+                
+                    $ \left. xy^2 \right |_{-y-2}^y =$
+
+                    $ y^3 - (-y-2)y^2 = $
+
+                    $ y^3 + y^3 + 2y^2 = $
+
+                    $ 2y^3 + 2y^2$
+
+                \item $\int_{-1}^1 2y^3 + 2y^2 dy=$
+                
+                    $\left. \frac{y^4}{2} + \frac{2y^3}{3} \right |_{-1}^1 = $
+
+                    $ \frac{1}{2} + \frac{2}{3} - \frac{1}{2} + \frac{2}{3} = $
+
+                    $ \frac{4}{3} $
+
+            \end{itemize}
+
+            \item $\int \int_D \frac{y}{x^5+1} dA, D=\{(x,y) \in \mathbb{R}^2: 0\leq x \leq 1, 0\leq y \leq x^2\}$
+
+                D es una region tipo 1 y por fubini
+
+                $ = \int_0^1 (\int_0^{x^2} \frac{y}{x^5+1} dy) dx $
+
+                \begin{itemize}
+                    \item $\int_0^{x^2} \frac{y}{x^5+1} dy \stackrel{Barrow}{=} $
+                    
+                        $ \left. \frac{y^2}{2x^5+2} \right |_0^{x^2} =  $
+
+                        $ \frac{x^4}{2x^5+2} $
+
+                    \item $\int_0^1 \frac{x^4}{2x^5+2} dx =$
+                    
+                        $ \int \frac{x^4}{2x^5+2} dx = $
+
+                        $ u = x^5, du = 5x^4 dx, dx = \frac{du}{5x^4} $
+
+                        $ \int \frac{1}{10u+10} du = $
+
+                        $ \frac{\ln(u+1)}{10} = $
+
+                        $ \int_0^1 \frac{\ln(x^5+1)}{10} \stackrel{barrow}{=}$
+
+                        $ \frac{\ln(2)}{10} - \frac{\ln(1)}{10} = \frac{\ln(2)}{10}$
+
+                \end{itemize}
+
+    \end{enumerate}
+
+\end{document}

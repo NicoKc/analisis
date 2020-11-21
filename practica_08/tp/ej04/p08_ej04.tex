@@ -1,0 +1,86 @@
+\documentclass[../practica_08.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item $ \int_1^4(\int_0^2 (6x^2y-2x) dy) dx $
+        
+            \begin{itemize}
+                \item $\int_0^2 (6x^2y-2x) dy = $
+                
+                    $\left. (3x^2y^2) \right |_0^2 = $
+
+                    $ 12x^2 $
+
+                \item $ \int_1^4(\int_0^2 (6x^2y-2x) dy) dx =$
+                
+                    $ \int_1^4 12x^2 dx = $
+
+                    $ \left. 4x^3 \right |_1^4 = $
+
+                    $ 192 - 4 = 188 $
+
+            \end{itemize}
+
+        \item $ \int_0^4(\int_0^2 (y^3e^{2x}) dy) dx $
+        
+            \begin{itemize}
+                \item $\int_0^2 (y^3e^{2x}) dy = $
+                
+                    $\left.  \frac{y^4e^{2x}}{4}  \right |_0^2 = $
+
+                    $ \frac{16e^{2x}}{4} $
+
+                \item $int_0^4 \frac{16e^{2x}}{4} dx $
+                
+                    $\left. 8e^{2x}  \right |_0^4 = $
+
+                    $ 8e^8 - 8 = 8(e^8-1) $
+
+            \end{itemize}
+
+        \item $ \int_{\frac{\pi}{2}}^{\frac{\pi}{6}}(\int_{-1}^5 \cos(y) dx) dy $
+        
+            \begin{itemize}
+                \item $\int_{-1}^5 \cos(y) dy = $
+                
+                    $ \left. x\cos(y) \right |_{-1}^5 = $
+
+                    $ 5\cos(y) + \cos(y) =  6 \cos(y) $
+
+                \item $\int_{\frac{\pi}{2}}^{\frac{\pi}{6}}(6 \cos(y)) dx$
+                
+                    $ \left. 6 \cos(y) \right |_{\frac{\pi}{2}}^{\frac{\pi}{6}} =$
+
+                    $ 6\cos(\frac{\pi}{6})$
+
+            \end{itemize}
+
+        \item $ \int_1^3(\int_1^5 \frac{\ln(y)}{xy} dy) dx $
+        
+            \begin{itemize}
+                \item $\int_1^5 \frac{\ln(y)}{xy} dy$
+                
+                    $ u = \ln(y) $
+
+                    $du = \frac{1}{y} dy \Rightarrow dy = du\cdot y \Rightarrow$
+
+                    $\int_1^5 \frac{u}{x} du =$
+
+                    $\left. \frac{\ln(y)^2}{2x} \right |_1^5= $
+
+                    $ \frac{\ln(5)^2}{2x} - \frac{\ln(2)^2}{2x}$
+
+                \item $\int_1^3 \frac{\ln(5)^2}{2x} - \frac{\ln(2)^2}{2x} dx = $
+                
+                    $ (\ln(5)^2 - \ln(2)^2)\int_1^3 \frac{1}{2x} dx = $
+
+                    $ (\ln(5)^2 - \ln(2)^2) \left. -x^{-1} \right |_1^3 = $
+
+                    $ (\ln(5)^2 - \ln(2)^2)(-3^{-1}+1)$
+
+            \end{itemize}
+
+    \end{enumerate}
+
+\end{document}

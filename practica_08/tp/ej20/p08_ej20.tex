@@ -1,0 +1,33 @@
+\documentclass[../practica_08.tex]{subfiles}
+
+\begin{document}
+
+    $ D: x^2+z^2=4, y = -1, y + z = 4 $
+
+    $ \int_{-2}^2 (\int_{-1}^2 (\int_{-\sqrt{4-x^2}}^{\sqrt{4-x^2}} 1 dz ) dy) dx$
+
+    \begin{itemize}
+
+        \item $\int_{-\sqrt{4-x^2}}^{\sqrt{4-x^2}} 1 dz = $
+
+            $ \left. z \right |_{-\sqrt{4-x^2}}^{\sqrt{4-x^2}} =  $
+
+            $ \sqrt{4-x^2} + \sqrt{4-x^2} $
+
+        \item $ \int_{-1}^2 \sqrt{4-x^2} + \sqrt{4-x^2} dy =  $
+        
+            $ \left. \sqrt{4-x^2}y + \sqrt{4-x^2}y \right |_{-2}^2 = $
+
+            $ 3\sqrt{4-x^2} $
+
+        \item $\int_{-2}^2 3\sqrt{4-x^2} dx = $
+        
+            $ \left. 2\arcsin \left(\frac{1}{2}x\right)+\sin \left(2\arcsin \left(\frac{1}{2}x\right)\right) \right |_{-2}^2 = $
+
+            $ 6\pi$
+
+    \end{itemize}
+
+    
+
+\end{document}

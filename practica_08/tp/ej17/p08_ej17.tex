@@ -1,0 +1,30 @@
+\documentclass[../practica_08.tex]{subfiles}
+
+\begin{document}
+
+    $ \int \int \int_E (xy + z^2) dV, E = \{(x,y,z) \in \mathbb{R}^3, 0\leq x\leq 2, 0\leq y\leq 1, 0\leq x \leq 3\}$
+
+    $ \int_0^2 (\int_0^1 (\int_0^3 (xy+z^2)dz) dy ) dx $
+
+    \begin{itemize}
+        \item $ \int_0^3 xy + z^2 dz = $
+        
+            $\left. xyz + \frac{z^3}{3}  \right |_0^3 = $
+
+            $ 3xy + 9 $
+
+        \item $\int_0^1 3xy + 9 dy = $
+        
+            $ \left. \frac{3xy^2}{2} + 9y \right |_0^1 = $
+
+            $ \frac{3x}{2} + 9 $
+
+        \item $\int_0^2 \frac{3x}{2} + 9 dx =$
+    
+            $ \left. \frac{3x^2}{4} + 9x \right |_0^2 =$
+
+            $ 3 + 18 = 21 $
+
+    \end{itemize}
+
+\end{document}

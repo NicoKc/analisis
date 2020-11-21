@@ -1,0 +1,44 @@
+\documentclass[../practica_08.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item $\int_0^4 (\int_0^{\sqrt{y}} xy^2 dx) dy$
+        
+            \begin{itemize}
+                \item $\int_0^{\sqrt{y}} xy^2 dx = $
+                
+                    $ \left. \frac{x^2y^2}{2}  \right |_0^{\sqrt{y}} = $
+
+                    $ \frac{y^3}{2} $
+
+                \item $ \int_0^4 \frac{y^3}{2} dy = $
+
+                    $ \left. \frac{y^4}{8} \right |_0^4 = $
+
+                    $ 32 $
+
+            \end{itemize}
+
+        \item $\int_0^1 ( \int_{x^2}^{x} (1+2y)dy ) dx = $
+        
+            \begin{itemize}
+                \item $ \int_{x^2}^{x} (1+2y)dy =  $
+                
+                    $ \left. y + y^2 \right |_{x^2}^{x} =$
+
+                    $ x \cancel{+ x^2} \cancel{- x^2} - x^4 = $
+
+                    $ x - x^4$
+
+                \item $\int_0^1 x - x^4 dx = $
+                
+                    $\left. \frac{x^2}{2} - \frac{x^5}{5} \right |_0^1 = $
+
+                    $ \frac{1}{2} - \frac{1}{5} = \frac{3}{10}$
+
+            \end{itemize}
+
+    \end{enumerate}
+
+\end{document}

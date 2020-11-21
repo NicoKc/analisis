@@ -1,0 +1,58 @@
+\documentclass[../practica_08.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item $ \int\int_R \frac{xy^2}{x^2+1} dA, R=\{(x,y) \in \mathbb{R}^2: 0\leq x\leq 1, -3 \leq y \leq 3\} $
+
+            \begin{itemize}
+                \item $ \int_{-3}^3 \frac{xy^2}{x^2+1} dy =  $
+                
+                    $ \left. \frac{xy^3}{3(x^2+1)} \right |_{-3}^3 = $
+
+                    $ 18 \cdot \frac{x}{x^2+1} $
+
+                \item $ 18 \cdot \int_{0}^1 \frac{x}{x^2+1} dx = $
+
+                    $ u = x^2, du = 2x dx$
+
+                    $ 9 \cdot \int_{0}^1 \frac{2x}{x^2+1} dx = $
+
+                    $ 9 \cdot \int_{0}^1 \frac{1}{u+1} du = $
+
+                    $ 9 \cdot \ln(u+1) du = $
+
+                    $ 9 \cdot \left. \ln(x^2+1) \right |_0^1 = $
+
+                    $ 9(\ln(2) - \ln(1))  $
+
+            \end{itemize}
+
+        \item $ \int\int_R \frac{x}{1+xy} dA, R=[0,1]x[0,1] $
+        
+            \begin{itemize}
+                \item $ \int_0^1 \frac{x}{1+xy} dy = $
+                
+                    $ u = xy, du = x dy $
+
+                    $\int \frac{x}{1+xy} dy = $
+
+                    $\int \frac{1}{1+u} du = $
+
+                    $ \ln(1+xy) + C \Rightarrow$
+                    
+                    $ \left. \ln(1+xy) \right |_0^1 = $
+
+                    $ \ln(1+x) - \ln(1) $
+
+                \item $ \int_0^1 \ln(1+x) dx = $
+
+                    $ \left. (x+1)\ln(1+x)-x \right |_0^1 = $
+
+                    $ 2\ln(2) - 2 - \ln(1) + 1 $
+
+            \end{itemize}
+
+    \end{enumerate} 
+
+\end{document}

@@ -1,0 +1,96 @@
+\documentclass[../practica_08.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item $\int \int_D x dA, D, y=x, y=0, x=1$
+        
+            \begin{enumerate}
+                \item Tipo 1
+
+                    $\int_0^1 (\int_0^x x dy) dx = $
+
+                    \begin{itemize}
+                        \item $\int_0^x x dy = $
+                        
+                            $\left. xy \right |_0^x = $
+                            
+                            $ x^2 $
+
+                        \item $\int_0^1 x^2 dx = $
+                        
+                            $ \left. \frac{x^3}{3} \right |_0^1 = $
+
+                            $\frac{1}{3}$
+
+                    \end{itemize}
+
+                \item Tipo 2
+                
+                    $\int_0^1 (\int_y^1 x dx) dy$
+
+                    \begin{itemize}
+                        \item $\int_y^1 x dx =$
+                        
+                            $\left. \frac{x^2}{2} \right |_0^y = $
+
+                            $ \frac{1}{2}-\frac{y^2}{2} $
+
+                        \item $\int_0^1 \frac{1}{2}-\frac{y^2}{2} dy = $
+                        
+                            $\left. \frac{y}{2}-\frac{y^3}{6} \right |_0^1$
+
+                            $ \frac{1}{2} - \frac{1}{6} = \frac{1}{3} $
+
+                    \end{itemize}
+
+            \end{enumerate}
+
+        \item $ \int \int_D xy dA, D y=x^2, y=3x$
+
+            \begin{enumerate}
+                \item Tipo 1
+                
+                    $\int_0^3 (\int_{x^2}^{3x} xy dy)dx$
+
+                    \begin{itemize}
+                        \item $ \int_{x^2}^{3x} xy dy = $
+                        
+                            $ \left. \frac{xy^2}{2}  \right |_{x^2}^{3x} =$
+
+                            $ \frac{9x^3}{2} - \frac{x^5}{2} $
+
+                        \item $ \int_0^3 \frac{9x^3}{2} - \frac{x^5}{2} dx = $
+                        
+                            $\left. \frac{9x^4}{8} - \frac{x^6}{12} \right |_0^3 = $
+
+                            $ \frac{243}{8} $
+
+                    \end{itemize}
+
+                \item Tipo 2
+                
+                    $\int_0^9 (\int_{\frac{y}{3}}^{\sqrt{y}} xy dx) dy$
+
+                    \begin{itemize}
+                        \item $ \int_{\frac{y}{3}}^{\sqrt{y}} xy dx =$
+                        
+                            $\left. \frac{yx^2}{2} \right |_{\frac{y}{3}}^{\sqrt{y}} = $
+
+                            $ \frac{y^2}{2} - \frac{y^3}{18} $
+                        
+                        \item $ \int_0^9 \frac{y^2}{2} - \frac{y^3}{18} dy =$
+                        
+                            $ \left. \frac{y^3}{6} - \frac{y^4}{72} \right |_0^9 = $
+
+                            $ \frac{243}{2} - \frac{729}{8} = $
+
+                            $\frac{243}{8}$
+
+                    \end{itemize}
+
+            \end{enumerate}
+
+    \end{enumerate}
+
+\end{document}

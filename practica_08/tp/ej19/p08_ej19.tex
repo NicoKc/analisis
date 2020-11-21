@@ -1,0 +1,115 @@
+\documentclass[../practica_08.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item $\int_0^3 \int_0^x \int_{x-y}^{x+y} y dz dy dx$
+        
+            \begin{itemize}
+                \item $ \int_{x-y}^{x+y} y dz = $
+                
+                    $\left.  yz \right |_{x-y}^{x+y} =$
+
+                    $ (x+y)y - (x-y)y = xy + y^2 - xy + y^2 = $
+
+                    $ 2y^2 $
+
+                \item $ \int_0^x 2y^2 dy =  $
+                
+                    $\left. \frac{2y^3}{3} \right |_0^x = $
+
+                    $ \frac{2x^3}{3} $
+
+                \item $ \int_0^3 \frac{2x^3}{3} dx = $
+                
+                    $ \left. \frac{2x^4}{12} \right |_0^3 = $
+
+                    $ \frac{2 \cdot 81}{12} $
+
+            \end{itemize}
+
+        \item $\int \int \int_E e^{\frac{z}{y}} dv, E=\{(x,y,z) \in \mathbb{R}^3: 0 \leq y \leq 1, y \leq x \leq 1, 0 \leq z \leq xy \} = $
+        
+            $\int_0^1 (\int_y^1 (\int_0^{xy} e^{\frac{z}{y}} dz) dx) dy$
+        
+            \begin{itemize}
+                \item $ \int_0^{xy} e^{\frac{z}{y}} dz = $
+                
+                    $\left. ye^{\frac{z}{y}} \right |_0^{xy} = $
+
+                    $  ye^{x} - y $
+
+                \item $ \int_y^1 ye^x - y dx = $
+                
+                    $\left. ye^x - yx \right |_y^1 = $
+
+                    $ ye^y - y^2 + ye + y $
+
+                \item $\int_0^1 ye^y - y^2 + ye + y dy = $
+                
+                    $ \left. -\frac{y^2}{2}+\frac{y^3}{3}+\frac{ey^2}{2}-e^yy+e^y \right |_0^1 = $
+
+                    $ - \frac{7}{6} + \frac{e}{2} $
+
+            \end{itemize}
+
+        \item $ \int \int \int_E xy dV, E, y=x^2, x=y^2, z=0, z= x+y $
+        
+            $D= \{(x,y,z) \in \mathbb{R}^3, 0\leq x\leq 1 \wedge x^2 \leq y \leq \sqrt{x} \wedge 0 \leq z \leq x+y\}$
+
+            $ \int_0^1(\int_{x^2}^{\sqrt{x}} (\int_0^{x+y} xy dz) dy)dx$
+
+            \begin{itemize}
+                \item $\int_0^{x+y} xy dz = $
+                
+                    $\left. xyz \right |_0^{x+y} = $
+
+                    $ xy(x+y) = yx^2 + xy^2 $
+
+                \item $\int_{x^2}^{\sqrt{x}} yx^2 + xy^2 dy = $
+
+                    $ \left. \frac{y^2x^2}{2} + \frac{xy^3}{3} \right |_{x^2}^{\sqrt{x}} = $
+
+                    $ \frac{x^3}{2} + \frac{x\sqrt{x}^3}{3} - \frac{x^6}{2} - \frac{x^7}{3} =  $
+
+                    $ \frac{x^3}{2} + \frac{x^{\frac{5}{2}}}{3} - \frac{x^6}{2} - \frac{x^7}{3} = $
+
+                \item $\int_0^1 \frac{x^3}{2} + \frac{x^{\frac{5}{2}}}{3} - \frac{x^6}{2} - \frac{x^7}{3} dx = $
+
+                    $ \left. \frac{x^4}{8} + \frac{x^{\frac{7}{2}}}{\frac{21}{2}} - \frac{x^7}{14} - \frac{x^8}{24} \right |_0^1 = $
+
+                    $ \frac{1}{8} + \frac{1}{42} - \frac{1}{14} - \frac{1}{24} = \frac{1}{28} $
+
+
+            \end{itemize}
+
+        \item $\int \int \int_E x dV, E: x=4y^2+4z^2 \wedge x=4$
+        
+            $D = \{(x,y,z) \in \mathbb{R}^3, -1 \leq y \leq 1, 4y^2\leq x \leq 4 \wedge -4y^2 \leq z \leq 4y^2\}$
+
+            $\int_{-1}^1 (\int_{4y^2}^4 (\int_{-4y^2}^{4y^2} x dz) dx) dy$
+
+            \begin{itemize}
+                \item $\int_{-4y^2}^{4y^2} x dz = $
+
+                    $ \left. xz \right |_{-4y^2}^{4y^2} = $
+
+                    $ 4xy^2  + 4xy^2 = $
+
+                    $ 8xy^2 $
+
+                \item  $\int_{4y^2}^4 8xy^2 dx = $
+                
+                    $ \left. 4x^2y^2 \right |_{4y^2}^4 = $
+
+                    $ 64y^2 - 16y^6 $
+
+                \item  $\int_{-1}^1 64y^2 - 16y^6 dy = $
+                
+                    $ 64 - 16 - 64 + 16 $
+
+            \end{itemize}
+
+    \end{enumerate}
+
+\end{document}
