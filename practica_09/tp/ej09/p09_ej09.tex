@@ -2,6 +2,49 @@
 
 \begin{document}
 
-    $ $
+    \begin{enumerate}
+        \item $ \int_{-\frac{\pi}{2}}^{\frac{pi}{2}} (\int_0^2 (\int_0^{r^3} r dz) dr) d\theta $
+        
+            \begin{itemize}
+                \item $\int_0^{r^3} r dz$
+
+                    $ \left. rz \right |_0^{r^3} = $
+
+                    $ r^4 $
+
+                \item $\int_0^2 r^4 dr = $
+                
+                    $ \left. \frac{r^5}{5} \right |_0^2 = $
+
+                    $ \frac{32}{5} $
+
+                \item $\int_{-\frac{\pi}{2}}^{\frac{pi}{2}} \frac{32}{5} d\theta =$
+                
+                    $ \left. \frac{32}{5} \theta \right |_{-\frac{\pi}{2}}^{\frac{pi}{2}} = $
+
+                    $ \frac{32}{5}\pi $
+
+            \end{itemize}
+
+        \item $ \int_0^2 (\int_0^{2\pi} (\int_0^r r dz) d\theta) dr $
+        
+            \begin{itemize}
+                \item $\int_0^r r dz = $
+                
+                    $ r^2 $
+
+                \item  $ \int_0^{2\pi} r^2 d\theta = $
+                
+                    $ 2\pi r^2 $
+
+                \item $ \int_0^2 2\pi r^2 dr = $
+                
+                    $2\pi \left. \frac{r^3}{3} \right |_0^2 = $
+
+                    $2\pi \frac{8}{3} $
+
+            \end{itemize}
+
+    \end{enumerate}
 
 \end{document}

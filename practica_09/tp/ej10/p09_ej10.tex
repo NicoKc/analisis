@@ -2,6 +2,124 @@
 
 \begin{document}
 
-    $ $
+    \begin{enumerate}
+        \item $E$ = $x^2+y^2 = 16 \wedge z = -5 \wedge z = 4$
+        
+            $ x^2+y^2 = 16 \equiv T(r, \theta) = (r\cos(\theta), r\sin(\theta)), 0 \leq \theta \leq 2\pi$
+
+            $\wedge -5 rleq z \leq 4$
+
+            $E^{\prime} = \left\{
+                \begin{array}{ll}
+                    x = r\cos(\theta)\\
+                    y = r\sin(\theta)\\
+                    z = z
+                \end{array}
+            \right. \wedge $
+
+            $ \left\{
+                \begin{array}{ll}
+                    0 \leq \theta \leq 2\pi\\
+                    -4 \leq r \leq 4\\
+                    -5 \leq z \leq 4
+                \end{array}
+            \right. $
+
+            $ \int\int\int_E \sqrt{x^2+y^2} dV(x,y) = \int\int\int_{E^{\prime}} r^2 dr $
+
+            $\int_{-4}^4 (\int_0^{2\pi} (\int_{-5}^4 r^2 dz) d\theta) dr$
+
+            \begin{itemize}
+                \item $\int_{-5}^4 r^2 dz = $
+                
+                    $ \left. \frac{r^3}{3} \right |_{-5}^4 = $
+
+                    $ \frac{4^3}{3} + \frac{5^3}{3} = 63 $
+
+            \end{itemize}
+
+        \item $E = z = x^2+y^2 \wedge z = 4$
+        
+            $E^{\prime} =  \left\{
+                \begin{array}{ll}
+                    x = r\cos(\theta)\\
+                    y = r\sin(\theta)\\
+                    z = z
+                \end{array}
+            \right. \wedge $
+
+            $ \left\{
+                \begin{array}{ll}
+                    0 \leq \theta \leq 2\pi\\
+                    0 \leq r \leq 2\\
+                    r^2 \leq z \leq 4
+                \end{array}
+            \right. $
+
+            $ \int_0^2 ( \int_0^{2\pi} (\int_{r^2}^4 zr dz ) d\theta) dr $
+
+            \begin{itemize}
+                \item $\int_{r^2}^4 zr dz = $
+                
+                    $ r \left. \frac{z^2}{2} \right |_{r^2}^4 = $
+
+                    $ r ( 8 - \frac{r^4}{2}) = $
+
+                    $ 8r - \frac{r^5}{2} $
+
+                \item $ \int_0^{2\pi} 8r - \frac{r^5}{2} d\theta = $
+                
+                    $ 16r\pi - 8r^5\pi = 8\pi(2r - r^5)$
+
+                \item $8\pi \cdot \int_0^2 2r - r^5 dr = $
+                
+                    $8\pi (\left. r^2 - \frac{r^6}{6}  \right |_0^2) = $
+
+                    $ 8\pi (4 - \frac{32}{3})$
+
+            \end{itemize}
+    
+        \item $E= x^2+y^2=1 \wedge z = 0 \wedge z^2=4x^2+4y^2$
+        
+        $E^{\prime} =  \left\{
+            \begin{array}{ll}
+                x = r\cos(\theta)\\
+                y = r\sin(\theta)\\
+                z = z
+            \end{array}
+        \right. \wedge $
+
+        $ \left\{
+            \begin{array}{ll}
+                0 \leq \theta \leq 2\pi\\
+                \frac{z}{2} \leq r \leq 1\\
+                0 \leq z \leq 2
+            \end{array}
+        \right. $
+
+        $\int_0^2 (\int_0^{2\pi} (\int_{\frac{z}{2}}^1 r^3\cos^2(\theta) dr) d\theta) dz$
+
+        \begin{itemize}
+            \item $\int_{\frac{z}{2}}^1 r^3\cos^2(\theta) dr = $
+            
+                $\cos^2(\theta) \left. \frac{r^4}{4} \right |_{\frac{z}{2}}^1 = $
+
+                $ \cos^2(\theta)( \frac{1}{4} - \frac{z^4}{64}  ) = $
+                
+            \item $( - \frac{z^4}{64} + \frac{1}{4} ) \int_0^{2\pi} \cos^2(\theta) d\theta = $
+            
+                $( - \frac{z^4}{64} + \frac{1}{4} )\left. - 2\cos(\theta)\sin(\theta) \right |_0^{2\pi} = $
+
+                $ - \frac{z^4}{64} + \frac{1}{4} $
+        
+            \item $\int_0^2 -\frac{z^4}{64} + \frac{1}{4} dz =  $
+            
+                $\left. - \frac{z^5}{320} + \frac{z}{4} \right |_0^2 = $
+
+                $ - \frac{1}{10} + \frac{1}{2} = \frac{2}{5}$
+
+        \end{itemize}
+
+    \end{enumerate}
 
 \end{document}

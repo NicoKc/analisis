@@ -2,6 +2,123 @@
 
 \begin{document}
 
-    $ $
+    \begin{enumerate}
+        \item $\int\int_D x^2ydA, D:$ mitad superior del disco con centro en el origen y radio 5
+        
+            \begin{itemize}
+                \item $x = r\cos(\theta)$
+                \item $y = r\sin(\theta)$
+                \item $0\leq r \leq 5$
+                \item $0\leq \theta \leq \pi$
+            \end{itemize} $\Rightarrow$
+
+            $T:\mathbb{R}^2 \to \mathbb{R}^2$
+
+            $T(r,\theta) = (r\cos(\theta),r\sin(\theta)) $
+
+            $\int\int_D f(x,y) dA(x,y) = \int \int_D f(T(r,\theta)) \abs*{JT(u,v)} dA(u,v)$
+
+            \begin{itemize}
+                \item $f(T(r,\theta)) = r^2\cos^2(\theta)r\sin(\theta) = $
+                    $r^3\cos^2(\theta)\sin(\theta)$
+            \end{itemize}
+
+            $JT(u,v) = \begin{vmatrix}
+                \cos(\theta)    -r\sin(\theta)
+                \sin(\theta)    r\cos(\theta)
+            \end{vmatrix} = r\cos^2(\theta) + r\sin^2(\theta) = r$
+
+            $\int_0^{\pi} (\int_0^5 r^3\cos^2(\theta)\sin(\theta) dr) d\theta = $
+
+            \begin{itemize}
+                \item $\int_0^5 r^3\cos^2(\theta)\sin(\theta) dr = $
+                
+                    $\left. \frac{r^4\cos^2(\theta)\sin(\theta)}{4} \right |_0^5 = $
+
+                    $ \frac{625\cos^2(\theta)\sin(\theta)}{4} $
+
+                \item $\frac{625}{4} \int_0^{\pi} \cos^2(\theta)\sin(\theta) = $
+                
+                    $\frac{625}{4} \left. -\frac{1}{3} \cos^3(\theta) \right |_0^{\pi} = $
+
+                    $ \frac{625}{4} \cdot \frac{2}{3}  $
+
+            \end{itemize}
+
+        \item $\int\int_D (2x-y) dA, D:$ region del primer cuadrante encerrada por la circunferencia $x^2 + y^2 = 4$, $x = 0$ e $y=x$
+        
+            $D = \{(r,\theta) \in \mathbb{R}^2: 0\leq r \leq 2 \wedge \frac{\pi}{4} \leq \frac{\pi}{2}\}$  
+
+            $T(r,\theta) = (r\cos(\theta),r\sin(\theta))$
+
+            $ \int_{\frac{\pi}{4}}^{\frac{\pi}{2}} ( \int_0^2 f(T(r,\theta)) \cdot JT(r,\theta) dr ) d\theta = $
+
+            $ \int_{\frac{\pi}{4}}^{\frac{\pi}{2}} ( \int_0^2 2r\cos(\theta) - r\sin(\theta) \cdot r dr ) d\theta $
+
+            \begin{itemize}
+                \item $\int_0^2 2r\cos(\theta) - r\sin(\theta) \cdot r dr = $
+                
+                    $\int_0^2 2r^2\cos(\theta) - r^2\sin(\theta) dr = $
+
+                    $\int_0^2 r^2(2\cos(\theta) - \sin(\theta)) dr = $
+
+                    $(2\cos(\theta) - \sin(\theta)) \int_0^2 r^2 dr = $
+
+                    $(2\cos(\theta) - \sin(\theta)) (\left. \frac{r^3}{3}\right |_0^2 )= $
+
+                    $(2\cos(\theta) - \sin(\theta)) \frac{8}{3} = $
+
+                    $(2\cos(\theta) - \sin(\theta)) \frac{8}{3} = $
+
+                \item $\frac{8}{3} \int_{\frac{\pi}{4}}^{\frac{\pi}{2}} 2\cos(\theta) - \sin(\theta) d\theta = $
+                
+                    $\frac{8}{3} \left. -2\sin(\theta) - \cos(\theta) \right |_{\frac{\pi}{4}}^{\frac{\pi}{2}} = $
+
+                    $\frac{8}{3} \cdot 2\left(1-\frac{1}{\sqrt{2}}\right)-\frac{1}{\sqrt{2}} $
+
+            \end{itemize}
+
+
+        \item $\int\int_D \sin(x^2+y^2) dA, D:$ region del primer cuadrante encerrada por la circunferencia con centro en el origen y radios 1 y 3
+        
+            $\int_0^{\frac{\pi}{2}} (\int_1^3 \sin(r^2) r dr) d\theta = $
+
+            \begin{itemize}
+                \item $\int_1^3 \sin(r^2) r dr = $
+                
+                    $\left. - \frac{1}{2}\cos(r^2) \right |_1^3 = $
+
+                    $ -\frac{1}{2}\cos(9) + \frac{1}{2}\cos(1) =  $
+
+                    $ \frac{1}{2}(\cos(1)- \cos(9)) $
+
+                \item $\frac{1}{2}(\cos(1)- \cos(9)) \int_0^{\frac{\pi}{2}} 1 d\theta = $
+
+                    $ \frac{1}{2}(\cos(1)- \cos(9)) (\frac{pi}{2})$
+
+            \end{itemize}
+        
+        \item $\int\int_D e^{-x^2-y^2} dA, D:$ region acotada por las semicircunferencias $x=\sqrt{4-y^2}$ y el eje $y$
+        
+            $\int_{\frac{3\pi}{2}}^{\frac{5\pi}{2}} (\int_0^2 e^{-r^2} r dr) d\theta = $
+
+            \begin{itemize}
+                \item $\int_0^2 e^{-r^2} r dr = $
+                
+                    $ \left. -e^{-r^2} \right |_0^2 = $
+
+                    $ -e^{-4} - 1 $
+
+                \item $\int_{\frac{3\pi}{2}}^{\frac{5\pi}{2}} -e^{-4} - 1 d\theta = $
+                
+                    $ (-e^{-4} - 1) \int_{\frac{3\pi}{2}}^{\frac{5\pi}{2}} 1 d\theta = $
+
+                    $ (-e^{-4} - 1)(\frac{5\pi}{2}- \frac{3\pi}{2} ) = $
+
+                    $(-e^{-4} - 1)\pi$
+
+            \end{itemize}
+
+    \end{enumerate}
 
 \end{document}
