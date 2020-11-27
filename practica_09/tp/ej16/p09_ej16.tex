@@ -2,6 +2,33 @@
 
 \begin{document}
 
-    $ $
+    $\left \{\begin{array}{ll}
+        x = \rho\cos(\theta)\sin(\phi) \qquad 0 \leq \rho \leq 2\\
+        y = \rho\sin(\theta)\sin(\phi) \qquad 0 \leq \theta \leq \frac{\pi}{2}\\
+        z = \rho\cos(\phi) \qquad\qquad \frac{\pi}{4} \leq \phi \leq \frac{\pi}{2}
+    \end{array} \right.$
+
+    $\int_0^2 ( \int_0^{\frac{\pi}{2}} (\int_{\frac{\pi}{4}}^{\frac{\pi}{2}} \rho^2\sin(\phi) d\phi) d\theta ) d\rho$
+
+    \begin{itemize}
+        \item $\int_{\frac{\pi}{4}}^{\frac{\pi}{2}} \rho^2\sin(\phi) d\phi = $
+        
+            $ \left. \rho^2-\cos(\phi) \right |_{\frac{\pi}{4}}^{\frac{\pi}{2}} = $
+
+            $ \rho^2 (-\cos(\frac{\pi}{2}) + \cos(\frac{\pi}{4})) = $
+
+            $ \rho^2 \frac{\sqrt{2}}{2} $
+
+        \item $\int_0^{\frac{\pi}{2}} \rho^2\frac{\sqrt{2}}{2} d\theta = $
+        
+            $ \frac{\pi\sqrt{2}}{4} \rho^2 $
+
+        \item  $ \frac{\pi\sqrt{2}}{4} \int_0^2 -\rho^2 d\rho = $
+        
+            $ \frac{\pi\sqrt{2}}{4} \left. \frac{-\rho^3}{3} \right |_0^2 = $
+
+            $ \frac{\pi\sqrt{2}}{4} \frac{-8}{3} = -\frac{2\pi\sqrt{2}}{3}$
+
+    \end{itemize}
 
 \end{document}
