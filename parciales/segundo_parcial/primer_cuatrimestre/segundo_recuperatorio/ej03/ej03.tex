@@ -1,0 +1,65 @@
+\documentclass[../parcial.tex]{subfiles}
+
+\begin{document}
+
+    \begin{enumerate}
+        \item $ \int \int_D (2x+1) dA, D: y = x^2 \wedge x+y=2$
+        
+            \begin{itemize}
+                \item $-2 \leq x \leq 1$
+                \item $ x^2 \leq y \leq 2 - x $
+            \end{itemize}
+
+            Tipo 1
+
+            $\int_{-2}^1 (\int_{x^2}^{2-x} 2x+1 dy ) dx$
+
+            \begin{itemize}
+                \item $\int_{x^2}^{2-x} 2x+1 dy = $
+
+                    $ \left. 2xy + y \right |_{x^2}^{2-x} = $
+
+                    $ 2x(2-x) + (2-x) - 2x(x^2) - x^2 = $
+
+                    $ 4x - 2x^2 + 2 - x - 2x^3 - x^2 = $
+
+                    $ 2x^3 - 3x^2 + 3x + 2$
+
+                \item $\int_{-2}^1 2x^3 - 3x^2 + 3x + 2 dx = $
+
+                    $ \left. \frac{x^4}{2} - x^3 + \frac{3x^2}{2} + 2x \right |_{-2}^1 = $
+
+                    $ \frac{1}{2} - 1 + \frac{3}{2} + 2 - 8 + 8 - 6 + 4 = $
+
+                    $ 2 - 1 + 2 - 6 + 4 = 1 $
+
+            \end{itemize}
+
+        \item $\int \int \int_E x dV, E: z=e^{x^2}, z=-y, (x,y) \in R=[1,2]x[0,2] $ en el plano $xy$
+
+            $ \int_1^2 (\int_0^2 (\int_{e^{x^2}}^{-y} x dz ) dy) dx $
+
+            \begin{itemize}
+                \item $int_{e^{x^2}}^{-y} x dz = $
+                
+                    $-xy - xe^{x^2}$
+
+                \item $ \int_0^2 -xy - xe^{x^2} dy = $
+                
+                    $ \left. \frac{-xy^2}{2} - yxe^{x^2} \right |_0^2 = $
+
+                    $ -2x - 2xe^{x^2} $
+
+                \item $ \int_1^2 -2x - 2xe^{x^2} dx = $
+                
+                    $ \left. -x^2 - e^{x^2} \right |_1^2  $
+
+                    $ -4 - e^4 + 1 + e = $
+
+                    $ -3 + e(-e^3 + 1) $
+
+            \end{itemize}
+
+    \end{enumerate}
+
+\end{document} 

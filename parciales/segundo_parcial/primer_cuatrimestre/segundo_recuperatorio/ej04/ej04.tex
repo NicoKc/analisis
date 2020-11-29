@@ -1,0 +1,39 @@
+\documentclass[../parcial.tex]{subfiles}
+
+\begin{document}
+
+    $\int \int_D \frac{1}{x^2+y^2+1} dA$
+
+    $D= \{(x,y) \in \mathbb{R}^2: 1 \leq x^2 + y^2 \leq 16, -x \leq y \leq x\}$
+
+    \begin{itemize}
+        \item $ 1 \leq r \leq 4$
+        \item $ \frac{7}{8}\pi \leq \theta \leq \frac{9}{8}$
+    \end{itemize}
+
+    $ \int_1^4 (\int_{\frac{7}{8}\pi}^{\frac{9}{8}\pi } \frac{r}{r^2+1} d\theta) dr $
+
+    $ \frac{r}{r^2+1}(\frac{9}{8}\pi - \frac{7}{8}\pi) = $
+
+    $ \frac{r}{r^2+1}(\frac{1}{4}\pi) = $
+
+    $ \frac{1}{4}\pi \int_1^4 \frac{r}{r^2+1} dr = $
+
+    $ \int \frac{r}{r^2+1} dr$
+
+    $ u = r^2+1, du = 2r dr, dr = \frac{du}{2r}$
+
+    $ \int \frac{r}{r^2+1} dr = \int \frac{r}{u} \frac{du}{2r} = $
+
+    $ \int \frac{1}{2u} du = \frac{1}{2\ln(u)} + C$
+
+    $\Rightarrow \int_1^4 \frac{r}{r^2+1} dr = $
+
+    $ \left. \frac{1}{2} \ln(r^2+1) \right |_1^4 = $
+
+    $\frac{1}{2}( \ln(17) - \ln(2)) $
+
+    $ = \frac{\pi}{8}(\ln(17) - \ln(2))$
+
+
+\end{document} 
