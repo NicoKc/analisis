@@ -1,0 +1,43 @@
+\documentclass[../parcial.tex]{subfiles}
+
+\begin{document}
+
+    $f: \mathbb{R}^2 \to \mathbb{R} \in C^2 : $
+
+    $P_2(x,y) = -2 + 2x - y - y^2$ en $(1,0)$
+
+    $g: \mathbb{R}^2 \to \mathbb{R}$
+
+    $g(x,y) = e^{f(x,y)} + xy - 2x$
+
+    QvQ$(1,0)$ es pto criticio de $g$
+
+    $g_x(x,y) = f_x(x,y)e^{f(x,y)} + y - 2$
+
+    $g_y(x,y) = f_y(x,y)e^{f(x,y)} + x$
+
+    $g_x(1,0) = f_x(1,0)e^{f(1,0)} - 2$
+
+    $g_y(1,0) = f_y(1,0)e^{f(1,0)} + 1$
+
+    $f(1,0) = P(1,0) = 0$
+
+    $f_x(1,0) = P_x(1,0) = 2$
+
+    $f_y(1,0) = P_y(1,0) = -1 \Rightarrow$
+
+    $g_x(1,0) = 0 \wedge g_y(1,0) = 0 \Rightarrow$
+
+    $\grad_g(1,0) = (0,0) \Rightarrow (1,0)$ es pto critico de $g$
+
+    \begin{itemize}
+        \item $g_{xx}(x,y) = f_{xx}(x,y)e^{f(x,y)} + f_x(x,y)^2e^{f(x,y)}$
+        \item $g_{yy}(x,y) = f_{yy}(x,y)e^{f(x,y)} + f_y(x,y)^2e^{f(x,y)}$
+        \item $g_{xy}(x,y) = f_{xy}(x,y)e^{f(x,y)} + f_x(x,y)f_y(x,y)e^{f(x,y)} + 1$
+    \end{itemize}
+
+    $H_g = \begin{vmatrix}
+        g_x
+    \end{vmatrix}$
+
+\end{document}

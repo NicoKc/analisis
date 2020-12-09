@@ -1,0 +1,88 @@
+\documentclass[../parcial.tex]{subfiles}
+
+\begin{document}
+
+    $g: \mathbb{R}^2 \to \mathbb{R} \wedge g \in C^2$
+
+    $p(x,y) = x^2 + 3xy + y ^2$ polinomio de taylor de orden 2 en $(0,0)$
+
+    $f:\mathbb{R}^2 \to \mathbb{R}$
+
+    $f(x,y) = \sin^2(x-y)+2g(x,y) \Rightarrow$
+
+    \subsection*{Analizo las derivadas de $p$}
+
+    \begin{itemize}
+        \item $p_x(x,y) = 2x + 3y $
+        \item $p_y(x,y) = 3x + 2y $
+        \item $p_{xx}(x,y) = 2 $
+        \item $p_{xy}(x,y) = 3 $
+        \item $p_{yy}(x,y) = 2 $
+    \end{itemize}
+
+    \subsection*{Como $p$ es el polinomio de taylor de $g$ en $(0,0)$ en $(0,0)$ sus derivadas coinciden}
+
+    \begin{itemize}
+        \item $g(0,0) = p(0,0) = 0 $
+        \item $g_x(0,0) = p_x(0,0) = 0 $
+        \item $g_y(0,0) = p_y(0,0) = 0 $
+        \item $g_{xx}(0,0) = p_{xx}(0,0) = 2 $
+        \item $g_{yy}(0,0) = p_{yy}(0,0) = 3 $
+        \item Como $g,p \in C^2: g_{xy}(0,0) = g_{yx}(0,0) = p_{xy}(0,0) = p_{yx}(0,0) = 2$
+    \end{itemize}
+
+    \begin{enumerate}
+        \item 
+            \subsection*{Analizo $f$ y sus derivadas}
+
+            Propongo $r(x,y) = \sin^2(x-y) \in C^2$ al ser trigonometrica
+
+            \begin{itemize}
+                \item $r_x(x,y) = 2\sin(x-y)\cos(x-y)$
+                \item $r_y(x,y) = -2\sin(x-y)\cos(x-y)$
+                \item $r_{xx}(x,y) = 2(\cos(x-y)\cos(x-y) + \sin(x-y)(-\sin(x-y))) =$
+
+                    $2(\cos^2(x-y) - \sin^2(x-y)) $
+                \item $r_{xy}(x,y) = r_{yx}(x,y) = 2\cos^2(x,y)(-1) - 2\sin^2(x-y)(-1) = $
+                
+                    $2\sin^2(x-y) - 2\cos^2(x-y) = $
+
+                    $2(\sin^2(x-y) - \cos^2(x-y))$
+
+                \item $r_{yy}(x,y) = -2\cos^2(x-y)(-1) + 2\sin^2(x-y)(-1) =$
+
+                    $ 2\cos^2(x-y) - 2\sin^2(x-y) = $
+
+                    $ 2(\cos^2(x-y) - \sin^2(x-y)) $
+            \end{itemize}
+
+            $f(x,y) = r(x,y) + 2g(x,y)$
+
+            \begin{itemize}
+                \item $ f(0,0) = r(0,0) + 2g(0,0) = 0 + 2(0) = 0 $
+                \item $ f_x(0,0) = r_x(0,0) + 2g_x(0,0) = 0 + 2(0) = 0$
+                \item $ f_y(0,0) = r_y(0,0) + 2g_y(0,0) = 0 + 2(0) = 0$
+                \item $ f_{xx}(0,0) = r_{xx}(0,0) + 2g_y(0,0) = 2 + 2(2) = 6$
+                \item $ f_{xy}(0,0) = f_{yx}(0,0) = r_{xy}(0,0) + 2g_y(0,0) = -2 + 2(2) = 2$
+                \item $ f_{yy}(0,0) = r_{yy}(0,0) + 2g_y(0,0) = 2 + 2(3) = 8$
+            \end{itemize}
+
+            \subsection*{Desarrollo el polinomio de taylor de orden 2 en $(0,0)$}
+
+            $t(x,y) = f(0,0) + f_x(0,0)x + f_y(0,0)y + \frac{f_{xx}(0,0)x^2}{2} + \frac{f_{yy}(0,0)y^2}{2} + f_{xy}(0,0)xy = $
+
+            $t(x,y) = 0 + 0x + 0y + \frac{\cancelto{3}{6}x^2}{\cancel{2}} + \frac{\cancelto{4}{8}y^2}{\cancel{2}} + 2xy = $
+
+            $t(x,y) = 3x^2 + 4x^2 + 2xy$
+
+        \item $\grad f(0,0) = (0,0) \Rightarrow $ es un punto critico
+        
+            \subsection*{Analizo por el criterio del Hessiano}
+
+            $ det(H_f(0,0)) = f_{xx} \cdot f_{yy} - f_{xy} \cdot f_{yx} = 6\cdot 8 - 2 \cdot 2 = 44 $
+
+            $ det(H_f(0,0)) > 0 \wedge f_{xx} > 0 \stackrel{por\ el\ criterio\ del\ Hessiano}{\Rightarrow} (0,0) $ es un mínimo local de $f$
+
+    \end{enumerate}
+
+\end{document}

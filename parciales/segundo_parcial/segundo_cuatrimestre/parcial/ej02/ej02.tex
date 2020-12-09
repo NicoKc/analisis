@@ -1,0 +1,85 @@
+\documentclass[../parcial.tex]{subfiles}
+
+\begin{document}
+
+    \subsection*{Datos}
+        \begin{itemize}
+            \item $f:\mathbb{R}^2 \to \mathbb{R}$
+            \item $f(x,y) = xy$
+            \item $D = \{ (x,y) \in \mathbb{R}^2: x \geq 0 \wedge y \leq 0 \wedge x^2+y^2 \leq 4\}$
+        \end{itemize}
+
+        Por Weiertrass como $f$ es continua y $D$ compacto $f$ alcanza maximos y minimos absolutos en $D$
+
+    \subsection*{Analizo $D$}
+
+        \begin{itemize}
+            \item $x \geq 0 $
+            \item $y \leq 0 $
+            \item $x^2+y^2 \leq 4 $
+        \end{itemize}
+
+        $ x^2 + y^2 = 4 $ describe una circunferencia de radio 2 centrada en el $(0,0)$ y por $x \geq 0 \wedge y \leq 0$ solo me quedo con el 4to cuadrante
+
+        \subsubsection*{Borde de $D$}
+
+        \begin{itemize}
+            \item $x = 0 \wedge -2 \leq y \leq 0$
+            \item $y = 0 \wedge 0 \leq x \leq 2$
+            \item $x^2 + y^2 = 4$
+        \end{itemize}
+
+    \subsection*{Analizo $f$ en el interior de $D$}
+
+        \begin{itemize}
+            \item $x > 0 $
+            \item $y < 0 $
+            \item $x^2+y^2 < 4 $
+        \end{itemize}
+
+    \subsubsection*{Busco los ptos criticos de $f$ en el interior de $D$}
+
+        $\grad f(x,y) = (y,x) = (0,0) \Leftrightarrow (x,y) = (0,0)$ que se encuentra en el borde, entonces no tiene puntos criticos en el interior de $D$
+
+    \subsection*{Analizo el borde de $D$}
+
+    \begin{enumerate}
+        \item $x = 0 \wedge 0 \leq y \leq -2$
+
+            $ f(0,y) = 0 $
+
+            Como $ 0 \leq y \leq -2 $ y $f(x,y) = xy$ es decreciente por que $y$ es negativo, entonces $f$ alcanza su maximo sobre el eje y
+
+        \item $y = 0 \wedge 0 \leq x \leq 2$
+        
+            $ f(x,0) = 0$
+
+            Como $ 0 \leq y \leq -2 $ y $f(x,y) = xy$ es decreciente por que $y$ es negativo, entonces $f$ alcanza su maximo sobre el eje x
+
+        \item $x^2 + y^2 = 4$
+        
+            \subsubsection*{Paso a polares}
+            
+            $ g(r, t) = f(r\sin(t), r\cos(t))$
+
+            $ r = 2 \wedge $ para estar en el borde de $D : \frac{3\pi}{2} \leq t \leq 2\pi$
+
+            $ h(t) = g(2,t) = 4\sin(t)\cos(t)$ con $\frac{3\pi}{2} \leq t \leq 2\pi$
+
+            $ h^{\prime}(t) = 4(\sin^2(t) - \cos^2(t)) = 0 \Leftrightarrow t = \frac{7\pi}{4} $
+
+            \begin{itemize}
+                \item $y = 2\sin(\frac{7\pi}{4}) = -2 \frac{\sqrt{2}}{2} = -\sqrt{2}$
+                
+                \item $x = 2\cos(\frac{7\pi}{4}) = 2\frac{\sqrt{2}}{2} = \sqrt{2}$
+            \end{itemize}
+
+            Al ser $f$ decreciente ya que $y$ es negativo, su minimo es $-2$ que lo alcanza en $(\sqrt(2), -\sqrt(2))$
+
+    \end{enumerate}
+
+        $f$ alcanza su minimo absoluto en $(\sqrt(2),-\sqrt(2))$ que vale $-2$ y su maximo sobre los ejes $(0,y): -2 \leq y \leq 0 \wedge (x,0): 0\leq x \leq 2)$
+
+
+
+\end{document} 
